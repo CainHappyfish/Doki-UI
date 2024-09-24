@@ -1,0 +1,88 @@
+@use "../vars/buttons";
+
+.doki-button {
+  width: 80px;
+  height: 35px;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  font-weight: bold;
+  background: var(--button-default-bg);
+  color: black;
+  border: 1px solid var(--doki-button-default-border);
+  border-radius: 5px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.doki-button:hover {
+  background: var(--doki-button-default-bg-hover);
+  border: 1px solid var(--doki-button-default-border-hover);
+  color: var(--doki-button-default-text-hover);
+  opacity: 0.8;
+
+}
+
+.doki-primary-button {
+  border: none;
+  background: var(--doki-button-primary-bg);
+  color: white;
+}
+
+.doki-primary-button:hover {
+  background: var(--doki-button-primary-bg);
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-success-button {
+  border: none;
+  background: var(--doki-button-success-bg);
+  color: white;
+}
+
+.doki-success-button:hover {
+  background: var(--doki-button-success-bg);
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-info-button {
+  border: none;
+  background: var(--doki-button-info-bg);
+  color: white;
+}
+
+.doki-info-button:hover {
+  background: var(--doki-button-info-bg);
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-warning-button {
+  border: none;
+  background: var(--doki-button-warning-bg);
+  color: white;
+}
+
+.doki-warning-button:hover {
+  background: var(--doki-button-warning-bg);
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-danger-button {
+  border: none;
+  background: var(--doki-button-danger-bg);
+  color: white;
+}
+
+.doki-danger-button:hover {
+  background: var(--doki-button-danger-bg);
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
