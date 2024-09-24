@@ -7,47 +7,46 @@ import info from "../assets/info.svg";
 import warning from "../assets/warning.svg";
 import danger from "../assets/danger.svg";
 
-import DokiButton from "../components/buttons/doki-button.vue";
 </script>
 
 <template>
   <div class="buttons-container">
     <h2 class="title-2">Buttons</h2>
     <div class="buttons default-buttons">
-      <DokiButton>default</DokiButton>
-      <DokiButton type="primary">primary</DokiButton>
-      <DokiButton type="success">success</DokiButton>
-      <DokiButton type="info">info</DokiButton>
-      <DokiButton type="warning">warning</DokiButton>
-      <DokiButton type="danger">danger</DokiButton>
+      <doki-button>default</doki-button>
+      <doki-button type="primary">primary</doki-button>
+      <doki-button type="success">success</doki-button>
+      <doki-button type="info">info</doki-button>
+      <doki-button type="warning">warning</doki-button>
+      <doki-button type="danger">danger</doki-button>
     </div>
 
 
     <div class="buttons plain-buttons">
-      <DokiButton shape="plain">default</DokiButton>
-      <DokiButton type="primary" shape="plain">primary</DokiButton>
-      <DokiButton type="success" shape="plain">success</DokiButton>
-      <DokiButton type="info" shape="plain">info</DokiButton>
-      <DokiButton type="warning" shape="plain">warning</DokiButton>
-      <DokiButton type="danger" shape="plain">danger</DokiButton>
+      <doki-button shape="plain">default</doki-button>
+      <doki-button type="primary" shape="plain">primary</doki-button>
+      <doki-button type="success" shape="plain">success</doki-button>
+      <doki-button type="info" shape="plain">info</doki-button>
+      <doki-button type="warning" shape="plain">warning</doki-button>
+      <doki-button type="danger" shape="plain">danger</doki-button>
     </div>
 
     <div class="buttons round-buttons">
-      <DokiButton shape="round">default</DokiButton>
-      <DokiButton type="primary" shape="round">primary</DokiButton>
-      <DokiButton type="success" shape="round">success</DokiButton>
-      <DokiButton type="info" shape="round">info</DokiButton>
-      <DokiButton type="warning" shape="round">warning</DokiButton>
-      <DokiButton type="danger" shape="round">danger</DokiButton>
+      <doki-button shape="round">default</doki-button>
+      <doki-button type="primary" shape="round">primary</doki-button>
+      <doki-button type="success" shape="round">success</doki-button>
+      <doki-button type="info" shape="round">info</doki-button>
+      <doki-button type="warning" shape="round">warning</doki-button>
+      <doki-button type="danger" shape="round">danger</doki-button>
     </div>
 
     <div class="buttons circle-buttons">
-      <DokiButton shape="circle"><img :src="search" class="logo" alt="search"></DokiButton>
-      <DokiButton type="primary" shape="circle"><img :src="primary" class="logo" alt="primary"></DokiButton>
-      <DokiButton type="success" shape="circle"><img :src="success" class="logo" alt="success"></DokiButton>
-      <DokiButton type="info" shape="circle"><img :src="info" class="logo" alt="info"></DokiButton>
-      <DokiButton type="warning" shape="circle"><img :src="warning" class="logo" alt="warning"></DokiButton>
-      <DokiButton type="danger" shape="circle"><img :src="danger" class="logo" alt="danger"></DokiButton>
+      <doki-button shape="circle"><img :src="search" class="logo" alt="search"></doki-button>
+      <doki-button type="primary" shape="circle"><img :src="primary" class="logo" alt="primary"></doki-button>
+      <doki-button type="success" shape="circle"><img :src="success" class="logo" alt="success"></doki-button>
+      <doki-button type="info" shape="circle"><img :src="info" class="logo" alt="info"></doki-button>
+      <doki-button type="warning" shape="circle"><img :src="warning" class="logo" alt="warning"></doki-button>
+      <doki-button type="danger" shape="circle"><img :src="danger" class="logo" alt="danger"></doki-button>
     </div>
 
   </div>
@@ -55,12 +54,12 @@ import DokiButton from "../components/buttons/doki-button.vue";
   <div class="buttons-container">
     <h2 class="title-2">Disabled Buttons</h2>
     <div class="disabled-buttons">
-      <DokiButton disabled>default</DokiButton>
-      <DokiButton type="primary" disabled>primary</DokiButton>
-      <DokiButton type="success" disabled>success</DokiButton>
-      <DokiButton type="info" disabled>info</DokiButton>
-      <DokiButton type="warning" disabled>warning</DokiButton>
-      <DokiButton type="danger" disabled>danger</DokiButton>
+      <doki-button disabled>default</doki-button>
+      <doki-button type="primary" disabled>primary</doki-button>
+      <doki-button type="success" disabled>success</doki-button>
+      <doki-button type="info" disabled>info</doki-button>
+      <doki-button type="warning" disabled>warning</doki-button>
+      <doki-button type="danger" disabled>danger</doki-button>
     </div>
   </div>
 </template>

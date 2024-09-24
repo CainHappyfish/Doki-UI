@@ -1,30 +1,29 @@
 <script setup lang="ts">
 
-import DokiLink from "../components/links/doki-link.vue";
 </script>
 
 <template>
   <div class="links-container">
     <h2 class="title-2">Links</h2>
     <div class="links">
-      <DokiLink>default</DokiLink>
-      <DokiLink type="primary">primary</DokiLink>
-      <DokiLink type="success">success</DokiLink>
-      <DokiLink type="info">info</DokiLink>
-      <DokiLink type="warning">warning</DokiLink>
-      <DokiLink type="danger">danger</DokiLink>
+      <doki-link>default</doki-link>
+      <doki-link type="primary">primary</doki-link>
+      <doki-link type="success">success</doki-link>
+      <doki-link type="info">info</doki-link>
+      <doki-link type="warning">warning</doki-link>
+      <doki-link type="danger">danger</doki-link>
     </div>
   </div>
 
   <div class="links-container">
     <h2 class="title-2">Disabled Links</h2>
     <div class="links">
-      <DokiLink disabled>default</DokiLink>
-      <DokiLink type="primary" disabled>primary</DokiLink>
-      <DokiLink type="success" disabled>success</DokiLink>
-      <DokiLink type="info" disabled>info</DokiLink>
-      <DokiLink type="warning" disabled>warning</DokiLink>
-      <DokiLink type="danger" disabled>danger</DokiLink>
+      <doki-link disabled>default</doki-link>
+      <doki-link type="primary" disabled>primary</doki-link>
+      <doki-link type="success" disabled>success</doki-link>
+      <doki-link type="info" disabled>info</doki-link>
+      <doki-link type="warning" disabled>warning</doki-link>
+      <doki-link type="danger" disabled>danger</doki-link>
     </div>
   </div>
 </template>

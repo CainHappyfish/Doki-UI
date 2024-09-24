@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import {useAttrs} from "vue";
 
 const isDisabled = useAttrs().disabled !== undefined ? "doki-disabled-link" : ""
