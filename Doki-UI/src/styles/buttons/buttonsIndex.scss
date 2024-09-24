@@ -1,0 +1,15 @@
+@use "buttons";
+@use "plainButtons";
+@use "roundButtons";
+@use "circleButtons";
+
+.doki-disabled-button {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.doki-disabled-button:hover {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+

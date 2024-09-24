@@ -7,8 +7,11 @@ defineComponent({
 
 const shape = useAttrs().shape ? useAttrs().shape + "-" : ""
 const type = useAttrs().type ? useAttrs().type + "-" : ""
+const isDisabled = useAttrs().disabled !== undefined ? "doki-disabled-button" : ""
+// console.log(isDisabled)
 
-const buttonStyle = "doki-" + shape + type + "button"
+const buttonStyle = "doki-" + shape + type + "button" + " " + isDisabled
+
 
 </script>
 
