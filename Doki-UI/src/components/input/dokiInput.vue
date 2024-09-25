@@ -7,13 +7,31 @@ const props = defineProps<{
   autocomplete?: Array<string>
 }>()
 
-const type = useAttrs().type
+const type = useAttrs().type as string
 const isAutoComplete = type && props.autocomplete && props.autocomplete.length > 0
 
 const isShowed = ref(false)
 
+const isMatchMode = type.toLowerCase() === "match"
+
 // 当前输入
-const val = ref<string>()
+const val = ref<string>("")
+const getMatchedData = () => {
+  let result: Array<string> = []
+  for (const item of props.autocomplete!) {
+    if(item.startsWith(val.value)) result.push(item)
+  }
+
+  if (result.length === 0) return ["No match"]
+
+  return result
+}
+const fillData = computed(() => {
+  return isMatchMode && isAutoComplete ? getMatchedData() : props.autocomplete
+})
+
+// console.log(fillData.value)
+
 
 // 点击输入框弹出自动填充
 const handleAutoComplete = (): void => {
@@ -40,7 +58,7 @@ const handleClean = () => {
 
 <template>
   <div class="auto-input-container" v-bind="$attrs">
-    <doki-auto-complete :autocomplete="autocomplete" v-if="isAutoComplete && isShowed" @fill="handleValueChange"/>
+    <doki-auto-complete :autocomplete="fillData" v-if="isAutoComplete && isShowed" @fill="handleValueChange"/>
     <input class="doki-auto-input" @focus="handleAutoComplete" @blur="handleBlur" v-model="val">
     <img class="clean-icon" :src="clean" alt="Clean icon" @click="handleClean"/>
   </div>
