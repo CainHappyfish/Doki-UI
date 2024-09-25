@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "DokiUI docs",
-  description: "Docs for DokiUI",
+  title: "DokiUI",
+  description: "A simple persional UI component lib.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

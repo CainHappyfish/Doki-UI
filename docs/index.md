@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "DokiUI docs"
-  text: "Docs for DokiUI"
-  tagline: My great project tagline
+  name: "DokiUI"
+  text: "A simple persional UI component lib."
+#  tagline: My great project tagline
   actions:
     - theme: brand
       text: Markdown Examples
