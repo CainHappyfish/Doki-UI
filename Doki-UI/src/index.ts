@@ -1,11 +1,13 @@
 import dokiButton from "./components/buttons/dokiButton.vue"
 import dokiLink from "./components/links/dokiLink.vue";
+import dokiInput from "./components/input/dokiInput.vue"
 
 import type { App } from 'vue'
 
 const components = [
     dokiButton,
-    dokiLink
+    dokiLink,
+    dokiInput
 ]
 
 export function install(app: App): void {

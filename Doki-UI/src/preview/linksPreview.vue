@@ -43,8 +43,5 @@
   gap: 10px;
 }
 
-.title-2 {
-  margin: 5px;
-  font-family: 'Microsoft YaHei UI Light', sans-serif
-}
+
 </style>

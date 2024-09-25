@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineComponent, useAttrs} from 'vue'
+import {useAttrs} from 'vue'
 
 const shape = useAttrs().shape ? useAttrs().shape + "-" : ""
 const type = useAttrs().type ? useAttrs().type + "-" : ""
