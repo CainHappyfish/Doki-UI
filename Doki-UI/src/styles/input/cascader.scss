@@ -15,10 +15,10 @@
 }
 
 .doki-cascader:hover {
-  border: 1px solid var(--doki-input-hover-border);
+  border: 1px solid var(--doki-input-focus-border);
 }
 
-.doki-cascader:focus {
+.doki-cascader-focus {
   border: 1px solid var(--doki-input-focus-border);
   outline: none;
 }

@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import {cascaderOption, menuOption} from "../../../types";
+const props = defineProps<{
+  options: cascaderOption[]
+}>()
+
+
 
 
 </script>
@@ -18,7 +24,6 @@
 
   border-radius: 5px;
 
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +32,8 @@
   z-index: 3;
 
   position: absolute;
-  top: 40px;
+  top: 35px;
+  left: 0;
 
   padding: 10px;
 
