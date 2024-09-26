@@ -19,6 +19,6 @@
   flex-direction: column;
 
   margin: 5px 0;
-
+  padding: 5px;
 }
 </style>
