@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import DokiCascaderSelection from "./global/dokiCascaderSelection.vue";
 import {ref} from "vue";
-
+import {menuOption} from "../../types";
+const props = defineProps<{
+  options: menuOption
+}>()
 
 const isShow = ref(false)
 const handleMenu = (event: Event) => {
@@ -39,7 +42,7 @@ const handleBlur = () => {
 
 <template>
   <div class="doki-cascader" @click="handleMenu" @blur="handleBlur">
-    <doki-cascader-selection v-if="isShow" />
+    <doki-cascader-selection :options="options" v-if="isShow" />
     <input class="cascader-input" type="text" placeholder="select"  readonly>
     <svg class="menu-icon menu-icon-inactive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="rgba(187, 187, 187, 0.7)" d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"></path></svg>
   </div>

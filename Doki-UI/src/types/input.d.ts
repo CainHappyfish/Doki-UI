@@ -10,19 +10,20 @@ export interface cascaderOption {
     /**
      * 子菜单，可选
      * */
+    hasChildren?: false | boolean
     children?: cascaderOption[]
 
 }
 
 export interface menuOption {
     /**
-     * 要填入输入框的值
+     * 选项组
      * */
-    value: string
+    options: cascaderOption[]
     /**
-     * 级联菜单标签
+     * 是否有子组
      * */
-    label: string
+    hasChildren?: boolean
 
 
 }

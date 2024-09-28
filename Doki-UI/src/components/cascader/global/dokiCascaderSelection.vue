@@ -1,23 +1,32 @@
 <script setup lang="ts">
 import {cascaderOption, menuOption} from "../../../types";
 const props = defineProps<{
-  options: cascaderOption[]
+  options: menuOption
 }>()
 
+let firstMenu: string[] = []
+let secMap: Map<string, cascaderOption[]> = new Map()
+for (const option of props.options.options) {
+  firstMenu.push(option.value)
+  if (option.hasChildren) {
+    secMap.set(option.value, option.children!)
+  }
+}
 
-
+console.log(firstMenu)
 
 </script>
 
 <template>
-  <div class="cascader-selection">
-    <div class="cascader-selection-item" >
+  <div class="cascader-menu">
+    <div class="cascader-menu-item" v-for="item in firstMenu">
+      {{ item }}
     </div>
   </div>
 </template>
 
 <style scoped>
-.cascader-selection {
+.cascader-menu {
   min-width: 130px;
   max-height: 150px;
   background: white;
@@ -47,7 +56,7 @@ const props = defineProps<{
 
 }
 
-.cascader-selection-item {
+.cascader-menu-item {
   margin: 0 10px;
   font-family: "Microsoft YaHei UI Light", sans-serif;
 
@@ -55,11 +64,11 @@ const props = defineProps<{
   padding: 5px;
 }
 
-.cascader-selection::-webkit-scrollbar {
+.cascader-menu::-webkit-scrollbar {
   display: none;
 }
 
-.cascader-selection-item:hover {
+.cascader-menu-item:hover {
   cursor: pointer;
   background: rgba(187, 187, 187, 0.2);
 }
