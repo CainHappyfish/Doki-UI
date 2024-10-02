@@ -1,15 +1,21 @@
 <script setup lang="ts">
-import {cascaderOption, menuOption} from "../types";
+import {cascaderOption} from "../types";
 
-const previewData: menuOption = {
-  options: [{
+const previewData: cascaderOption[] =
+ [{
     label: "Poppin' Party",
     value: "Poppin' Party",
     hasChildren: true,
     children: [
       {
         label: "ksm",
-        value: "ksm"
+        value: "ksm",
+        children: [
+          {
+            label: "kirakira",
+            value: "kirakira"
+          }
+        ]
       },
       {
         label: 'ars',
@@ -55,9 +61,7 @@ const previewData: menuOption = {
         value: "rinrin"
       }
     ]
-  }],
-  hasChildren: true,
-}
+}]
 
 
 

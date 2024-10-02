@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import DokiAutoFillInput from "../components/input/dokiAutoFillInput.vue";
 
 const data = [
     "ksm",
@@ -17,6 +16,7 @@ const data = [
     <doki-auto-fill-input type="all" :autocomplete="data"/>
     <h3 class="title-3">Matched Tags</h3>
     <doki-auto-fill-input type="match" :autocomplete="data"/>
+
   </div>
 </template>
 

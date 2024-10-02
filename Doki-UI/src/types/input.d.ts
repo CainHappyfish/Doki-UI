@@ -28,7 +28,3 @@ export interface menuOption {
 
 }
 
-export {
-    cascaderOption,
-    menuOption
-}

@@ -75,16 +75,16 @@ const handleClean = () => {
 
 @keyframes hide {
   0% {
-    height: 150px;
+    opacity: 100%;
   }
   33% {
-    height: 100px;
+    opacity: 66%;
   }
   66% {
-    height: 50px;
+    opacity: 33%;
   }
   100% {
-    height: 0;
+    opacity: 0;
   }
 }
 

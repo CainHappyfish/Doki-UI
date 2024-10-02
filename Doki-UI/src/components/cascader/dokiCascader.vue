@@ -1,47 +1,56 @@
 <script setup lang="ts">
 import DokiCascaderSelection from "./global/dokiCascaderSelection.vue";
-import {ref} from "vue";
-import {menuOption} from "../../types";
+import {onMounted, onUnmounted, ref} from "vue";
+import {cascaderOption} from "../../types";
+
 const props = defineProps<{
-  options: menuOption
+  options: cascaderOption[]
 }>()
+
 
 const isShow = ref(false)
 const handleMenu = (event: Event) => {
   const target = event.currentTarget as HTMLElement
   const menuIcon = target.querySelector('.menu-icon')
-  const menuSelection = target.querySelector('.cascader-selection')
+  const menuSelection = target.querySelector('.cascader-menu')
 
-  if (isShow.value) {
-    console.log("hide")
-    menuSelection?.classList.toggle('hide')
-    setTimeout(() => {
-      isShow.value = false
-    }, 100)
-  } else {
-    isShow.value = true
-  }
+  isShow.value = !isShow.value
+
+  menuSelection?.classList.toggle('hide')
+
 
   target.classList.toggle('doki-cascader-focus')
   menuIcon?.classList.toggle('menu-icon-inactive')
   menuIcon?.classList.toggle('menu-icon-active')
 
-
-
 }
 
-const handleBlur = () => {
-  setTimeout(() => {
-    document.querySelector("cascader-selection")!.classList.toggle("hide")
-    setTimeout(() => {
-      isShow.value = false;
-    }, 100)
-  },100)
+const handleCascaderBlur = (event: Event) => {
+  const target = event.target as HTMLElement
+  // console.log("global click", target.classList.contains('doki-cascader') || target.classList.contains('cascader-input') || target.classList.contains('cascader-menu'))
+  if (target && !(target.classList.contains('doki-cascader') ||
+      target.classList.contains('cascader-input') ||
+      target.classList.contains('cascader-menu')
+  )) {
+    const menuIcon = document.querySelector('.menu-icon')
+    menuIcon!.classList.remove("menu-icon-active")
+    menuIcon!.classList.add('menu-icon-inactive')
+    // console.log(menuIcon!.classList)
+    isShow.value = false
+  }
 }
+
+onMounted(() => {
+  document.addEventListener('click', handleCascaderBlur)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click',handleCascaderBlur)
+})
 </script>
 
 <template>
-  <div class="doki-cascader" @click="handleMenu" @blur="handleBlur">
+  <div class="doki-cascader" @click="handleMenu">
     <doki-cascader-selection :options="options" v-if="isShow" />
     <input class="cascader-input" type="text" placeholder="select"  readonly>
     <svg class="menu-icon menu-icon-inactive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="rgba(187, 187, 187, 0.7)" d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"></path></svg>
@@ -51,6 +60,9 @@ const handleBlur = () => {
 <style scoped>
 .menu-icon {
   width: 20px;
+  z-index: -1;
+
+  cursor: pointer;
 }
 
 .doki-cascader {
@@ -85,16 +97,16 @@ const handleBlur = () => {
 
 @keyframes hide {
   0% {
-    height: 150px;
+    opacity: 100%;
   }
   33% {
-    height: 100px;
+    opacity: 66%;
   }
   66% {
-    height: 50px;
+    opacity: 33%;
   }
   100% {
-    height: 0;
+    opacity: 0;
   }
 }
 

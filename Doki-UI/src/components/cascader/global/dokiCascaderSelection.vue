@@ -1,27 +1,60 @@
 <script setup lang="ts">
-import {cascaderOption, menuOption} from "../../../types";
-const props = defineProps<{
-  options: menuOption
-}>()
+import {cascaderOption} from "../../../types";
+import {computed, ref} from "vue";
+const props = withDefaults(defineProps<{
+  options: cascaderOption[];
+  level?: number
+}>(), {
+  level: 0
+})
 
 let firstMenu: string[] = []
-let secMap: Map<string, cascaderOption[]> = new Map()
-for (const option of props.options.options) {
+// let secondMenu: string[] = []
+for (const option of props.options) {
   firstMenu.push(option.value)
-  if (option.hasChildren) {
-    secMap.set(option.value, option.children!)
+}
+
+const curChildIndex = ref(-1)
+// const secMenu = ref<cascaderOption[]>([])
+const secMenuOpen = ref(false)
+const getSecMenu = (event: Event) => {
+  event.stopPropagation()
+  const index: number = parseInt((event.target as HTMLElement).dataset.index!)
+  curChildIndex.value = index
+  const items = props.options[index].children
+  if (items && items.length > 0) {
+    secMenuOpen.value = true
   }
 }
 
-console.log(firstMenu)
+const childMenu = computed(() => {
+  return curChildIndex.value >= 0 ? props.options[curChildIndex.value].children! : []
+})
+
+
+
+const closeSecMenu = () => {
+  secMenuOpen.value = false
+}
 
 </script>
 
 <template>
-  <div class="cascader-menu">
-    <div class="cascader-menu-item" v-for="item in firstMenu">
+  <div class="cascader-menu" >
+    <div class="cascader-menu-item"
+     v-for="(item, index) in firstMenu"
+     :data-index="index"
+     @click="getSecMenu"
+    >
       {{ item }}
     </div>
+
+
+  </div>
+
+  <div class="child-menu"  v-if="secMenuOpen">
+    <doki-cascader-selection :options="childMenu" :level="level + 1" :key="curChildIndex"/>
+
   </div>
 </template>
 
@@ -52,7 +85,8 @@ console.log(firstMenu)
 
   overflow: scroll;
 
-  animation: linear 0.2s show;
+  animation: linear 0.1s show;
+
 
 }
 
@@ -75,19 +109,23 @@ console.log(firstMenu)
 
 @keyframes show {
   0% {
-    height: 0;
+    opacity: 0;
   }
   33% {
-    height: 50px;
+    opacity: 33%;
   }
   66% {
-    height: 100px;
+    opacity: 66%;
   }
   100% {
-    height: 150px;
+    opacity: 1;
   }
 }
 
+.child-menu {
+  position: absolute;
+  left: 160px;
 
+}
 
 </style>

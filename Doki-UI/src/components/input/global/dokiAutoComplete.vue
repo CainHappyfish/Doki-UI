@@ -79,16 +79,16 @@ const handleAutoFill = (event: MouseEvent, index: number) => {
 
 @keyframes show {
   0% {
-    height: 0;
+    opacity: 0;
   }
   33% {
-    height: 50px;
+    opacity: 33%;
   }
   66% {
-    height: 100px;
+    opacity: 66%;
   }
   100% {
-    height: 150px;
+    opacity: 1;
   }
 }
 
