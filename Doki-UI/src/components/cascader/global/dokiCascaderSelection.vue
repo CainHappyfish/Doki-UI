@@ -2,11 +2,16 @@
 import {cascaderOption} from "../../../types";
 import {computed, ref} from "vue";
 const props = withDefaults(defineProps<{
-  options: cascaderOption[];
+  options: cascaderOption[]
   level?: number
+  selected: string[]
 }>(), {
   level: 0
 })
+
+const emits = defineEmits<{
+  change: [value: string, label: string, level: number, selected: string[]]
+}>()
 
 let firstMenu: string[] = []
 // let secondMenu: string[] = []
@@ -15,8 +20,9 @@ for (const option of props.options) {
 }
 
 const curChildIndex = ref(-1)
-// const secMenu = ref<cascaderOption[]>([])
+
 const secMenuOpen = ref(false)
+
 const getSecMenu = (event: Event) => {
   event.stopPropagation()
   const index: number = parseInt((event.target as HTMLElement).dataset.index!)
@@ -25,6 +31,8 @@ const getSecMenu = (event: Event) => {
   if (items && items.length > 0) {
     secMenuOpen.value = true
   }
+  props.selected.push(props.options[index].value)
+  emits("change", props.options[index].value, props.options[index].label, props.level, props.selected)
 }
 
 const childMenu = computed(() => {
@@ -37,6 +45,9 @@ const closeSecMenu = () => {
   secMenuOpen.value = false
 }
 
+const handleChange = (value: string, label: string, level: number, selected: string[]) => {
+  emits("change", value, label, level, selected)
+}
 </script>
 
 <template>
@@ -53,7 +64,7 @@ const closeSecMenu = () => {
   </div>
 
   <div class="child-menu"  v-if="secMenuOpen">
-    <doki-cascader-selection :options="childMenu" :level="level + 1" :key="curChildIndex"/>
+    <doki-cascader-selection :options="childMenu" :level="level + 1" :key="curChildIndex" :selected="selected" @change="handleChange"/>
 
   </div>
 </template>
