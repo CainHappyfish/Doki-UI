@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import DokiCascaderSelection from "./global/dokiCascaderSelection.vue";
-import {onMounted, onUnmounted, ref} from "vue";
+import {computed, onMounted, onUnmounted, ref} from "vue";
 import {cascaderOption} from "../../types";
 
 const props = defineProps<{
   options: cascaderOption[]
 }>()
 
-const selected = ref<string[]>([])
+const selected = ref<Map<number, string>>(new Map<number, string>())
 
 const isShow = ref(false)
 const handleMenu = (event: Event) => {
@@ -37,14 +37,24 @@ const handleCascaderBlur = (event: Event) => {
     menuIcon!.classList.remove("menu-icon-active")
     menuIcon!.classList.add('menu-icon-inactive')
     // console.log(menuIcon!.classList)
-    isShow.value = false
+    document.querySelectorAll('.selection-container').forEach(menu => {
+      menu.classList.add('cascader-hide')
+    })
+    setTimeout(() => {
+      isShow.value = false
+
+    }, 100)
   }
 }
 
+// 动态更新input框长度
+const inputLength = computed(() => cascaderValue.value.length)
+
+
 const cascaderValue = ref("")
-const handleChange = (value: string, label: string, level: number, selected: string[]) => {
-  console.log(selected)
-  cascaderValue.value = selected.join(" / ")
+const handleChange = (value: string, label: string, level: number, selected: Map<number, string>) => {
+  // console.log(selected)
+  cascaderValue.value = [...selected.values()].join(" / ")
 }
 
 onMounted(() => {
@@ -57,10 +67,14 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="doki-cascader" @click="handleMenu">
-    <doki-cascader-selection :options="options" :selected="selected" v-if="isShow" @change="handleChange"/>
-    <input class="cascader-input" type="text" placeholder="select" :value="cascaderValue" readonly>
-    <svg class="menu-icon menu-icon-inactive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="rgba(187, 187, 187, 0.7)" d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"></path></svg>
+  <div class="doki-cascader" @click="handleMenu" :style="{width: inputLength * 8 + 'px'}">
+    <div class="selection-container" v-if="isShow">
+      <doki-cascader-selection :options="options" :selected="selected"  @change="handleChange"/>
+    </div>
+    <input class="cascader-input" :style="{width: (inputLength * 8 - 20) + 'px'}" type="text" placeholder="select" :value="cascaderValue" readonly>
+    <svg class="menu-icon menu-icon-inactive"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1024 1024"><path fill="rgba(187, 187, 187, 0.7)" d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"></path></svg>
   </div>
 </template>
 
@@ -72,14 +86,6 @@ onUnmounted(() => {
   cursor: pointer;
 }
 
-.doki-cascader {
-  display: flex;
-  align-items: center;
-
-  position: relative;
-
-
-}
 
 .menu-icon {
   cursor: pointer;
@@ -98,7 +104,24 @@ onUnmounted(() => {
   transform: rotate(-180deg);
 }
 
-.hide {
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-1px);
+  }
+  66% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.cascader-hide {
   animation: linear 0.1s hide;
 }
 
@@ -114,21 +137,6 @@ onUnmounted(() => {
   }
   100% {
     opacity: 0;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  33% {
-    transform: translateY(-1px);
-  }
-  66% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 </style>

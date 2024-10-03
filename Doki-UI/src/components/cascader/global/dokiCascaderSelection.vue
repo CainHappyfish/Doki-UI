@@ -4,13 +4,13 @@ import {computed, ref} from "vue";
 const props = withDefaults(defineProps<{
   options: cascaderOption[]
   level?: number
-  selected: string[]
+  selected: Map<number, string>
 }>(), {
   level: 0
 })
 
 const emits = defineEmits<{
-  change: [value: string, label: string, level: number, selected: string[]]
+  change: [value: string, label: string, level: number, selected: Map<number, string>]
 }>()
 
 let firstMenu: string[] = []
@@ -31,27 +31,28 @@ const getSecMenu = (event: Event) => {
   if (items && items.length > 0) {
     secMenuOpen.value = true
   }
-  props.selected.push(props.options[index].value)
+
+  props.selected.set(props.level, props.options[index].value)
+
   emits("change", props.options[index].value, props.options[index].label, props.level, props.selected)
 }
 
 const childMenu = computed(() => {
-  return curChildIndex.value >= 0 ? props.options[curChildIndex.value].children! : []
+  return curChildIndex.value >= 0 ? (props.options[curChildIndex.value].children || []) : []
 })
 
 
+// const closeSecMenu = () => {
+//   secMenuOpen.value = false
+// }
 
-const closeSecMenu = () => {
-  secMenuOpen.value = false
-}
-
-const handleChange = (value: string, label: string, level: number, selected: string[]) => {
+const handleChange = (value: string, label: string, level: number, selected: Map<number, string>) => {
   emits("change", value, label, level, selected)
 }
 </script>
 
 <template>
-  <div class="cascader-menu" >
+  <div class="cascader-menu">
     <div class="cascader-menu-item"
      v-for="(item, index) in firstMenu"
      :data-index="index"
@@ -64,7 +65,13 @@ const handleChange = (value: string, label: string, level: number, selected: str
   </div>
 
   <div class="child-menu"  v-if="secMenuOpen">
-    <doki-cascader-selection :options="childMenu" :level="level + 1" :key="curChildIndex" :selected="selected" @change="handleChange"/>
+    <doki-cascader-selection
+        :options="childMenu"
+        :level="level + 1"
+        :key="curChildIndex"
+        :selected="selected"
+        v-if="secMenuOpen && childMenu.length > 0"
+        @change="handleChange"/>
 
   </div>
 </template>
