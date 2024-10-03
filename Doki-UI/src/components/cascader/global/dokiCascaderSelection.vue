@@ -32,6 +32,14 @@ const getSecMenu = (event: Event) => {
     secMenuOpen.value = true
   }
 
+  // 最大层级
+  const maxLevel = Math.max(...props.selected.keys())
+  // 如果存在当前层级数据，则清空当前层级以及子级的数据
+  if (props.selected.get(props.level)) {
+    for (let i = props.level; i <= maxLevel; i++) {
+      props.selected.delete(i)
+    }
+  }
   props.selected.set(props.level, props.options[index].value)
 
   emits("change", props.options[index].value, props.options[index].label, props.level, props.selected)
