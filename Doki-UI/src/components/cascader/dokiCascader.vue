@@ -105,7 +105,6 @@ onUnmounted(() => {
 }
 
 
-
 @keyframes bounce {
   0% {
     transform: translateY(0);
