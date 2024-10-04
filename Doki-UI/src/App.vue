@@ -3,6 +3,7 @@ import ButtonsPreview from "./preview/buttonsPreview.vue";
 import LinksPreview from "./preview/linksPreview.vue";
 import InputPreview from "./preview/inputPreview.vue";
 import CascaderPreview from "./preview/cascaderPreview.vue";
+import SelectorPreview from "./preview/selectorPreview.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import CascaderPreview from "./preview/cascaderPreview.vue";
   <links-preview />
   <input-preview />
   <cascader-preview />
+  <selector-preview />
 
 </template>
 
