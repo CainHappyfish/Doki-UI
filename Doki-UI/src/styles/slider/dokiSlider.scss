@@ -1,0 +1,43 @@
+.doki-slider {
+  position: relative;
+  width: 250px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+
+
+}
+
+.doki-slider__slider {
+  width: 250px;
+  border: 3px solid #44DDFF;
+  border-radius: 2px;
+}
+
+.doki-slider__button {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #44DDFF;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  font-size: 13px;
+
+  cursor: pointer;
+
+}
+
+.doki-slider__percent {
+  position: absolute;
+  left: 260px;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+}

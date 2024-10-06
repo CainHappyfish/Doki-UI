@@ -1,0 +1,43 @@
+.doki-switch {
+
+  width: 52px;
+  height: 30px;
+  background: white;
+
+  filter: drop-shadow(0 0 1px rgb(0, 170, 187));
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+.switch-icon {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+
+  cursor: pointer;
+  /*border: 1px solid rgb(0, 170, 187);*/
+
+  position: absolute;
+  left: 4px;
+  border: 1px solid rgb(0, 170, 187);
+
+
+  transition: all 0.3s linear;
+
+  z-index: 2;
+}
+
+.switched-bg {
+  background: rgb(0, 170, 187);
+}
+
+.switched-icon {
+  transform: translateX(25px);
+}
