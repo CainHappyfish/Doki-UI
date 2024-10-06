@@ -81,9 +81,7 @@ button {
 }
 
 .disabled-buttons {
-  margin: 5px;
-  border: solid 1px cyan;
-  border-radius: 5px;
+  margin: 5px
 
 }
 
