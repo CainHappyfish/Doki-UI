@@ -7,8 +7,6 @@ const src = ref<string>(useAttrs().src as string || defaultAvatar)
 const size = ref<number>(useAttrs().size as number ? useAttrs().size as number : 60)
 const alt = ref<string>(useAttrs().alt as string ? useAttrs().alt as string: "avatar")
 
-console.log(` height: ${size.value}px , width: ${size.value}px `)
-
 </script>
 
 <template>

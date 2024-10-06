@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import avatar from "./public/avatar.jpg"
+
 import DokiAvatar from "../components/avatar/dokiAvatar.vue";
 
 </script>
 
 <template>
   <div class="avatar-container">
-    <h2 class="title-2">avatar</h2>
+    <h2 class="title-2">Avatar</h2>
     <div class="avatars-container">
       <div class="circle-avatars">
         <doki-avatar />
