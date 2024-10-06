@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import testImg from "../assets/ars.jpg"
+import testImg1 from "./public/ars.jpg"
+import testImg2 from "./public/cat.jpg"
 </script>
 
 <template>
@@ -7,10 +8,23 @@ import testImg from "../assets/ars.jpg"
     <h2 class="title-2">Image</h2>
     <h3 class="title-3">Normal Image</h3>
     <div class="image-wrapper">
-      <doki-image size="small" :src="testImg"/>
-      <doki-image size="natural" :src="testImg"/>
-      <doki-image size="medium" :src="testImg"/>
-      <doki-image size="large" :src="testImg"/>
+      <doki-image size="small" :src="testImg1"/>
+      <doki-image size="natural" :src="testImg1"/>
+      <doki-image size="medium" :src="testImg1"/>
+      <doki-image size="large" :src="testImg1"/>
+    </div>
+
+    <h3 class="title-3">Lazy Loading</h3>
+    <div class="lazy-image-wrapper">
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+      <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
+
     </div>
   </div>
 </template>
@@ -35,5 +49,11 @@ import testImg from "../assets/ars.jpg"
   flex-direction: row;
 
   gap: 20px;
+}
+
+.lazy-image-wrapper {
+  width: 600px;
+  height: 400px;
+  overflow: auto;
 }
 </style>
