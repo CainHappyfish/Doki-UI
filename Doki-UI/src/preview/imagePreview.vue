@@ -26,6 +26,7 @@ import testImg2 from "./public/cat.jpg"
       <doki-image  :src="testImg2" width="600" height="332.5" lazy/>
 
     </div>
+
   </div>
 </template>
 
@@ -52,7 +53,7 @@ import testImg2 from "./public/cat.jpg"
 }
 
 .lazy-image-wrapper {
-  width: 600px;
+  width: 620px;
   height: 400px;
   overflow: auto;
 }
