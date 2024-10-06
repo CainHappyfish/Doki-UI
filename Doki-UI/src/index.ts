@@ -13,6 +13,7 @@ import dokiAvatar from "./components/avatar/dokiAvatar.vue";
 
 
 import type { App } from 'vue'
+import dokiImage from "./components/image/dokiImage.vue";
 
 const components = [
     dokiButton,
@@ -25,7 +26,8 @@ const components = [
     dokiSwitch,
     dokiSlider,
     dokiAccordionSelector,
-    dokiAvatar
+    dokiAvatar,
+    dokiImage
 
 ]
 

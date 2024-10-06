@@ -7,6 +7,7 @@ import SelectorPreview from "./preview/selectorPreview.vue";
 import SwitchPreview from "./preview/switchPreview.vue";
 import SliderPreview from "./preview/sliderPreview.vue";
 import AvatarPreview from "./preview/avatarPreview.vue";
+import ImagePreview from "./preview/imagePreview.vue";
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import AvatarPreview from "./preview/avatarPreview.vue";
   <switch-preview />
   <slider-preview />
   <avatar-preview />
+  <image-preview />
 
 </template>
 
