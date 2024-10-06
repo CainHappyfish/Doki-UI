@@ -1,0 +1,20 @@
+.doki-avatar {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  filter: drop-shadow(0 0 2px rgba(159, 215, 239, 0.6));
+}
+
+.circle-avatar {
+  border-radius: 50%;
+}
+
+.square-avatar {
+  border-radius: 5px;
+}
+
+.doki-avatar:hover {
+  filter: drop-shadow(0 0 2px rgba(159, 215, 239, 0.8));
+}

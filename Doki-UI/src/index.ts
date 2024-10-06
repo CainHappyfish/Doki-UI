@@ -8,6 +8,7 @@ import dokiCheckboxButton from "./components/selector/dokiCheckboxButton.vue";
 import dokiSwitch from "./components/switches/dokiSwitch.vue"
 import dokiSlider from "./components/slider/dokiSlider.vue"
 import dokiAccordionSelector from "./components/selector/dokiAccordionSelector.vue";
+import dokiAvatar from "./components/avatar/dokiAvatar.vue";
 
 
 
@@ -24,6 +25,7 @@ const components = [
     dokiSwitch,
     dokiSlider,
     dokiAccordionSelector,
+    dokiAvatar
 
 ]
 

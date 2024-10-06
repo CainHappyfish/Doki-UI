@@ -6,6 +6,7 @@ import CascaderPreview from "./preview/cascaderPreview.vue";
 import SelectorPreview from "./preview/selectorPreview.vue";
 import SwitchPreview from "./preview/switchPreview.vue";
 import SliderPreview from "./preview/sliderPreview.vue";
+import AvatarPreview from "./preview/avatarPreview.vue";
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import SliderPreview from "./preview/sliderPreview.vue";
   <selector-preview />
   <switch-preview />
   <slider-preview />
+  <avatar-preview />
 
 </template>
 
