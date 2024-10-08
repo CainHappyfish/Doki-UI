@@ -32,7 +32,8 @@ const components = [
     dokiAvatar,
     dokiImage,
     dokiCarousel,
-    dokiCarouselItem
+    dokiCarouselItem,
+    dokiAccordion
 
 ]
 

@@ -5,6 +5,7 @@ import leftIcon from "./public/left.svg";
 import rightIcon from "./public/right.svg";
 
 const type = ref<string>(useAttrs().type === "vertical" ? "doki-carousel__vertical" : "doki-carousel__horizontal");
+const hide = ref<boolean>(useAttrs().hide === "")
 const indicatorType = ref<string>(useAttrs().type === "vertical" ? "indicator-item__vertical" : "indicator-item__horizontal");
 const itemLength = ref(0);
 
@@ -87,10 +88,10 @@ const onRightSwitchButtonClick = (event: Event) => {
       <slot></slot>
     </div>
 
-    <div class="doki-carousel-button__left" @click="onLeftSwitchButtonClick">
+    <div class="doki-carousel-button doki-carousel-button__left" @click="onLeftSwitchButtonClick" v-if="hide">
       <img :src="leftIcon" alt="left">
     </div>
-    <div class="doki-carousel-button__right" @click="onRightSwitchButtonClick">
+    <div class="doki-carousel-button doki-carousel-button__right" @click="onRightSwitchButtonClick" v-if="hide">
       <img :src="rightIcon" alt="right">
     </div>
 

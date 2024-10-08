@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import DokiCarousel from "../components/carousel/dokiCarousel.vue";
+
 </script>
 
 <template>
@@ -12,6 +12,14 @@ import DokiCarousel from "../components/carousel/dokiCarousel.vue";
         <h2 class="carousel-preview">{{ item }}</h2>
       </doki-carousel-item>
     </doki-carousel>
+  </div>
+
+  <div class="carousel-container">
+    <h2 class="title-2">Accordion</h2>
+    <h3 class="title-3">Horizontal</h3>
+    <doki-accordion>
+
+    </doki-accordion>
   </div>
 </template>
 

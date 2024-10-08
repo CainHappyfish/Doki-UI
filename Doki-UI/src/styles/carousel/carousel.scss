@@ -12,17 +12,21 @@
   height: 100%;
 }
 
-.doki-carousel-button__left {
+.doki-carousel-button {
   cursor: pointer;
   position: absolute;
-  left: 10px;
-  top: 45%;
+
   z-index: 1;
 
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(187, 187, 187, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s linear;
 
   img {
     width: 50px;
@@ -30,22 +34,22 @@
   }
 }
 
+.doki-carousel-button:hover {
+  background: rgba(187, 187, 187, 0.4);
+}
+
+.doki-carousel-button__left {
+  left: 10px;
+  top: 45%;
+
+
+
+}
+
 .doki-carousel-button__right {
-  cursor: pointer;
-  position: absolute;
   right: 10px;
   top: 45%;
-  z-index: 1;
 
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(187, 187, 187, 0.4);
-
-  img {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 .doki-carousel__vertical {
