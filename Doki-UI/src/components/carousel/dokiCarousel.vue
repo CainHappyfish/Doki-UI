@@ -5,7 +5,7 @@ import leftIcon from "./public/left.svg";
 import rightIcon from "./public/right.svg";
 
 const type = ref<string>(useAttrs().type === "vertical" ? "doki-carousel__vertical" : "doki-carousel__horizontal");
-const hide = ref<boolean>(useAttrs().hide === "")
+const hide = ref<boolean>(useAttrs().hide !== "");
 const indicatorType = ref<string>(useAttrs().type === "vertical" ? "indicator-item__vertical" : "indicator-item__horizontal");
 const itemLength = ref(0);
 
