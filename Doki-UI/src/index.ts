@@ -9,6 +9,9 @@ import dokiSwitch from "./components/switches/dokiSwitch.vue"
 import dokiSlider from "./components/slider/dokiSlider.vue"
 import dokiAccordionSelector from "./components/selector/dokiAccordionSelector.vue";
 import dokiAvatar from "./components/avatar/dokiAvatar.vue";
+import dokiCarousel from "./components/carousel/dokiCarousel.vue"
+import dokiCarouselItem from "./components/carousel/dokiCarouselItem.vue"
+import dokiAccordion from "./components/carousel/dokiAccordion.vue"
 
 
 
@@ -27,7 +30,9 @@ const components = [
     dokiSlider,
     dokiAccordionSelector,
     dokiAvatar,
-    dokiImage
+    dokiImage,
+    dokiCarousel,
+    dokiCarouselItem
 
 ]
 

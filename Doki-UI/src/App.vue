@@ -8,6 +8,7 @@ import SwitchPreview from "./preview/switchPreview.vue";
 import SliderPreview from "./preview/sliderPreview.vue";
 import AvatarPreview from "./preview/avatarPreview.vue";
 import ImagePreview from "./preview/imagePreview.vue";
+import CarouselPreview from "./preview/carouselPreview.vue";
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import ImagePreview from "./preview/imagePreview.vue";
   <slider-preview />
   <avatar-preview />
   <image-preview />
+  <carousel-preview />
 
 </template>
 

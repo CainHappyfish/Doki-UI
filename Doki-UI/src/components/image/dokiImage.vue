@@ -10,7 +10,6 @@ const size = ref<string>(useAttrs().size as string || "natural");
 const height = ref<string>(useAttrs().height as string ? useAttrs().height as string: "");
 const width = ref<string>(useAttrs().width as string ? useAttrs().width as string: "");
 
-console.log(isLazy.value)
 const errorImg = ref<string>(useAttrs().error as string || defaultImage);
 const imgID = ref<string>("dokiImg" + generateRandomNumber(1,114514));
 
