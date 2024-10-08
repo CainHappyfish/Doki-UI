@@ -44,20 +44,39 @@ const onLeftSwitchButtonClick = (event: Event) => {
   const target = event.target as HTMLElement
   const container = target.parentElement!
   const innerContent = container.parentElement!.querySelector(".doki-carousel-inner") as HTMLElement
+  const indicators = container.parentElement!.querySelectorAll(".indicator-item")
   curIndex.value = curIndex.value - 1 >= 0 ? --curIndex.value : 5
   const transVal = 800 * curIndex.value
   innerContent.style.transform = `translate(-${transVal}px)`
+  // console.log(indicators)
+  indicators.forEach((indicator, index) => {
+    if (index === curIndex.value) {
+      indicator.classList.add("indicator-item__active")
+    } else {
+      indicator.classList.remove("indicator-item__active")
+    }
+
+  })
 }
 
 const onRightSwitchButtonClick = (event: Event) => {
   const target = event.target as HTMLElement
   const container = target.parentElement!
   const innerContent = container.parentElement!.querySelector(".doki-carousel-inner") as HTMLElement
+  const indicators = container.parentElement!.querySelectorAll(".indicator-item")
+
   curIndex.value = curIndex.value + 1 <= 5 ? ++curIndex.value : 0
-  console.log(curIndex.value)
+  // console.log(curIndex.value)
   const transVal = 800 * curIndex.value
   innerContent.style.transform = `translate(-${transVal}px)`
+  indicators.forEach((indicator, index) => {
+    if (index === curIndex.value) {
+      indicator.classList.add("indicator-item__active")
+    } else {
+      indicator.classList.remove("indicator-item__active")
+    }
 
+  })
 }
 
 </script>
