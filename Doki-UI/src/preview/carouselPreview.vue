@@ -1,6 +1,22 @@
 <script setup lang="ts">
+import pic1 from "./public/34A5D8D332EA1C97045E7638B4BBBE00.jpg"
+import pic2 from "./public/A1046094F615DE97984A317ABC3D2051.jpg"
+import pic3 from "./public/B47CB45D9CDA5428D61A7A4E9C155EBD.jpg"
+import pic4 from "./public/C7189228C0D4110789789FDB052E0047.jpg"
+import pic5 from "./public/F90DBAEF8600280309DE09E9F21274A8.jpg"
+import pic6 from "./public/B49BBE3D3B050DC43A1B10A87C54ED20.jpg"
 
 
+import DokiAccordion from "../components/carousel/dokiAccordion.vue";
+import DokiAccordionItem from "../components/carousel/dokiAccordionItem.vue";
+const pics = [
+    pic1,
+    pic2,
+    pic3,
+    pic4,
+    pic5,
+    pic6
+]
 </script>
 
 <template>
@@ -18,7 +34,9 @@
     <h2 class="title-2">Accordion</h2>
     <h3 class="title-3">Horizontal</h3>
     <doki-accordion>
-
+      <doki-accordion-item v-for="pic in pics" :key="pic">
+        <img :src="pic" alt="pic" class="accordion-preview" />
+      </doki-accordion-item>
     </doki-accordion>
   </div>
 </template>
@@ -48,5 +66,13 @@
 
   font-family: Calibri, sans-serif;
 
+}
+
+.accordion-preview {
+  width: 600px;
+  height: 400px;
+
+  object-fit: cover;
+  z-index: -2;
 }
 </style>
