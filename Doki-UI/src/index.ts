@@ -18,6 +18,8 @@ import dokiVirtualList from "./components/virtualList/dokiVirtualList.vue";
 
 
 import type { App } from 'vue'
+import dokiVirtualListItem from "./components/virtualList/dokiVirtualListItem.vue";
+import dokiPagination from "./components/pagination/dokiPagination.vue";
 
 
 const components = [
@@ -37,7 +39,9 @@ const components = [
     dokiCarouselItem,
     dokiAccordion,
     dokiTag,
-    dokiVirtualList
+    dokiVirtualList,
+    dokiVirtualListItem,
+    dokiPagination
 
 ]
 

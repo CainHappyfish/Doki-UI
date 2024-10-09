@@ -10,6 +10,7 @@ import AvatarPreview from "./preview/avatarPreview.vue";
 import ImagePreview from "./preview/imagePreview.vue";
 import CarouselPreview from "./preview/carouselPreview.vue";
 import TagPreview from "./preview/tagPreview.vue";
+import VirtualListPreview from "./preview/virtualListPreview.vue";
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import TagPreview from "./preview/tagPreview.vue";
   <image-preview />
   <carousel-preview />
   <tag-preview />
+  <virtual-list-preview />
 
 </template>
 
