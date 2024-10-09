@@ -1,0 +1,48 @@
+:root {
+
+  /* background */
+  --doki-tag-default-bg: white;
+  --doki-tag-primary-bg: rgb(0, 170, 187);
+  --doki-tag-success-bg: rgb(119, 153, 119);
+  --doki-tag-warning-bg: rgb(255, 153, 34);
+  --doki-tag-danger-bg: rgb(221, 34, 0);
+
+  /* border */
+  --doki-tag-default-border: #BBBBBB;
+  --doki-tag-default-border-hover: #0077DD;
+
+  /* hover */
+  --doki-tag-default-bg-hover: #44DDFF;
+
+  /* text */
+  --doki-tag-default-text-hover: #0077DD;
+}
+
+/* hover */
+:root {
+
+  /* background */
+
+  --doki-hover-tag-default-bg: rgba(187, 187, 187, 0.3);
+  --doki-hover-tag-primary-bg: rgba(0, 170, 187, 0.3);
+  --doki-hover-tag-success-bg: rgba(119, 153, 119, 0.3);
+  --doki-hover-tag-warning-bg: rgba(255, 153, 34, 0.3);
+  --doki-hover-tag-danger-bg: rgba(221, 34, 0, 0.3);
+
+  /* border */
+  --doki-tag-default-border: #BBBBBB;
+  --doki-tag-default-border-hover: #0077DD;
+
+  /* hover */
+  --doki-tag-default-bg-hover: #44DDFF;
+
+  /* text */
+  --doki-tag-default-text-hover: #0077DD;
+
+  --doki-tag-default-bg: white;
+  --doki-tag-primary-bg: rgb(0, 170, 187);
+  --doki-tag-success-bg: rgb(119, 153, 119);
+  --doki-tag-info-bg: rgb(187, 187, 187);
+  --doki-tag-warning-bg: rgb(255, 153, 34);
+  --doki-tag-danger-bg: rgb(221, 34, 0);
+}

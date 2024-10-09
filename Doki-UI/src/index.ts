@@ -12,11 +12,13 @@ import dokiAvatar from "./components/avatar/dokiAvatar.vue";
 import dokiCarousel from "./components/carousel/dokiCarousel.vue"
 import dokiCarouselItem from "./components/carousel/dokiCarouselItem.vue"
 import dokiAccordion from "./components/carousel/dokiAccordion.vue"
-
+import dokiImage from "./components/image/dokiImage.vue";
+import dokiTag from "./components/tag/dokiTag.vue";
+import dokiVirtualList from "./components/virtualList/dokiVirtualList.vue";
 
 
 import type { App } from 'vue'
-import dokiImage from "./components/image/dokiImage.vue";
+
 
 const components = [
     dokiButton,
@@ -33,7 +35,9 @@ const components = [
     dokiImage,
     dokiCarousel,
     dokiCarouselItem,
-    dokiAccordion
+    dokiAccordion,
+    dokiTag,
+    dokiVirtualList
 
 ]
 
