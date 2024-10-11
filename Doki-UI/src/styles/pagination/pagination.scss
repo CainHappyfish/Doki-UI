@@ -1,0 +1,36 @@
+.doki-pagination {
+  max-width: 400px;
+
+  display: flex;
+  align-items: center;
+
+}
+
+.pagination-prev .pagination-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-start .page-end {
+
+}
+
+.pagination-item {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: rgba(187, 187, 187, 0.3);
+  }
+}

@@ -1,11 +1,13 @@
 <script setup lang="ts">
 
-import {ref} from "vue";
+import {onBeforeUnmount, onMounted, ref} from "vue";
 
 const listItems = ref(new Array(20).fill(0))
 for (let i = 0; i < listItems.value.length; i++) {
   listItems.value[i] = i+1
 }
+
+
 </script>
 
 <template>
@@ -48,4 +50,6 @@ for (let i = 0; i < listItems.value.length; i++) {
   text-align: center;
   border-radius: 5px;
 }
+
+
 </style>

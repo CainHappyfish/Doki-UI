@@ -11,6 +11,7 @@ import ImagePreview from "./preview/imagePreview.vue";
 import CarouselPreview from "./preview/carouselPreview.vue";
 import TagPreview from "./preview/tagPreview.vue";
 import VirtualListPreview from "./preview/virtualListPreview.vue";
+import PaginationPreview from "./preview/paginationPreview.vue";
 </script>
 
 <template>
@@ -25,7 +26,8 @@ import VirtualListPreview from "./preview/virtualListPreview.vue";
   <image-preview />
   <carousel-preview />
   <tag-preview />
-  <virtual-list-preview />
+<!--  <virtual-list-preview />-->
+  <pagination-preview />
 
 </template>
 
