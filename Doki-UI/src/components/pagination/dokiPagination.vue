@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, ref, useAttrs, watch} from "vue";
+import {computed, ref, useAttrs} from "vue";
 
 import prevIcon from "./public/left.svg"
 import nextIcon from "./public/right.svg"
@@ -15,7 +15,7 @@ const totalPage = computed(() => Math.ceil(total.value / perPage.value))
 const visiblePageLength = ref<number>(+useAttrs().visible ? +useAttrs().visible : 6)
 // const fastIndex = ref(useAttrs().fast === "")
 const jumpable = ref(useAttrs().jumpable === "")
-const short = ref(useAttrs().short === "" ? "short-pagination" : "")
+// const short = ref(useAttrs().short === "" ? "short-pagination" : "")
 const startPageIndex = ref<number>(1)
 const curIndex = ref(1)
 
@@ -287,7 +287,7 @@ const onJump = (e: Event) => {
 </script>
 
 <template>
-  <div class="doki-pagination" :class="short" v-if="paginationExisted">
+  <div class="doki-pagination" v-if="paginationExisted">
     <div class="total-count">
       Total {{ total }}
     </div>
