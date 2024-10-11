@@ -1,19 +1,107 @@
 .doki-pagination {
-  max-width: 400px;
+  margin: 10px 0;
 
+  min-width: 200px;
+  height: 40px;
   display: flex;
   align-items: center;
 
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+
 }
 
-.pagination-prev .pagination-next {
+.total-count {
+  min-width: 100px;
+}
+
+.pagination {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination-prev {
+  width: 40px;
+  max-height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+
+
 }
 
-.page-start .page-end {
+.pagination-next {
+  width: 40px;
+  max-height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
 
+
+}
+
+.pagination-prev img  {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: rgba(187, 187, 187, 0.3);
+  }
+}
+
+.pagination-next img  {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: rgba(187, 187, 187, 0.3);
+  }
+}
+
+.page-start {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: rgba(187, 187, 187, 0.3);
+  }
+}
+
+.page-end {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: rgba(187, 187, 187, 0.3);
+  }
 }
 
 .pagination-item {
@@ -34,3 +122,71 @@
     background: rgba(187, 187, 187, 0.3);
   }
 }
+
+.chosen {
+  background: rgba(187, 187, 187, 0.3);
+}
+
+.page-fold {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: rgba(187, 187, 187, 0.3);
+  }
+}
+
+.pagination-jump {
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+
+  width: 130px;
+}
+
+.pagination-jump input {
+  width: 40px;
+  height: 20px;
+  margin: 0 10px;
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+
+  appearance: none;
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #55DDEE;
+
+  transition: all 0.2s ease-in-out;
+
+
+}
+.pagination-jump input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pagination-jump input:hover {
+
+  border: 1px solid #00AABB;
+
+}
+
+.pagination-jump input:focus-visible {
+  border: 1px solid #0077DD;
+  appearance: none;
+  outline: none;
+}
+

@@ -5,8 +5,15 @@
 <template>
   <div class="pagination-container">
     <h2 class="title-2">Pagination</h2>
+    <h3 class="title-3">Normal Pagination</h3>
+    <doki-pagination visible="5" total="600" perPage="6"/>
+    <doki-pagination visible="5" total="30" perPage="6"/>
 
-    <doki-pagination visible="3" total="50" perPage="6"/>
+    <h3 class="title-3">Jumpable Pagination</h3>
+    <doki-pagination visible="5" total="1000" perPage="6" jumpable/>
+    <doki-pagination visible="5" total="30" perPage="6" jumpable/>
+
+
   </div>
 </template>
 
