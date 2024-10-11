@@ -6,9 +6,6 @@ import pic4 from "./public/C7189228C0D4110789789FDB052E0047.jpg"
 import pic5 from "./public/F90DBAEF8600280309DE09E9F21274A8.jpg"
 import pic6 from "./public/B49BBE3D3B050DC43A1B10A87C54ED20.jpg"
 
-
-import DokiAccordion from "../components/carousel/dokiAccordion.vue";
-import DokiAccordionItem from "../components/carousel/dokiAccordionItem.vue";
 const pics = [
     pic1,
     pic2,
@@ -32,7 +29,6 @@ const pics = [
 
   <div class="carousel-container">
     <h2 class="title-2">Accordion</h2>
-    <h3 class="title-3">Horizontal</h3>
     <doki-accordion>
       <doki-accordion-item v-for="pic in pics" :key="pic">
         <img :src="pic" alt="pic" class="accordion-preview" />
