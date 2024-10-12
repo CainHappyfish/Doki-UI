@@ -8,3 +8,14 @@
 
   overflow: auto;
 }
+
+.doki-virtual-list-item {
+  margin: 5px 0;
+
+}
+
+.doki-virtual-list-container {
+  position: relative;
+
+  transition: all 0.2s ease-in-out;
+}

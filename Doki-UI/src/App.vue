@@ -26,7 +26,7 @@ import PaginationPreview from "./preview/paginationPreview.vue";
   <image-preview />
   <carousel-preview />
   <tag-preview />
-<!--  <virtual-list-preview />-->
+  <virtual-list-preview />
   <pagination-preview />
 
 </template>

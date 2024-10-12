@@ -84,7 +84,7 @@ const onPrev = (event: Event) => {
     }
   }
   emits("currentPage", curIndex.value)
-  
+
 }
 
 const onNext = (event: Event) => {
