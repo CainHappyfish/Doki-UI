@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import {computed, ref, useAttrs} from "vue";
+import {computed, ref, useAttrs, watch} from "vue";
 
 import prevIcon from "./public/left.svg"
 import nextIcon from "./public/right.svg"
+
+const emits = defineEmits<{
+  currentPage: [pageIndex: number]
+}>()
 
 const paginationExisted = ref(true)
 if (!useAttrs().total && !useAttrs().perPage) {
@@ -34,7 +38,7 @@ const pages = computed(() => {
 
 
 
-const onPrev = () => {
+const onPrev = (event: Event) => {
   console.log(startPageIndex.value)
   const target = event.target as HTMLElement
   const container = target.parentElement?.parentElement as HTMLElement
@@ -79,7 +83,8 @@ const onPrev = () => {
       }
     }
   }
-
+  emits("currentPage", curIndex.value)
+  
 }
 
 const onNext = (event: Event) => {
@@ -118,6 +123,7 @@ const onNext = (event: Event) => {
     // 最左侧
     curPages[curIndex.value % visiblePageLength.value - Math.floor(+visiblePageLength.value / 2)].classList.add("chosen")
   }
+  emits("currentPage", curIndex.value)
 
 }
 
@@ -214,7 +220,7 @@ const onClick = (event: Event) => {
     curPages[Math.floor(+visiblePageLength.value / 2)].classList.add("chosen")
 
   }
-
+  emits("currentPage", curIndex.value)
 
 }
 
@@ -280,9 +286,14 @@ const onJump = (e: Event) => {
     }
 
   }
+  emits("currentPage", curIndex.value)
 
 };
 
+// watch(curIndex, () => {
+//   // console.log("change")
+//   emits("currentPage", curIndex.value)
+// })
 
 </script>
 
