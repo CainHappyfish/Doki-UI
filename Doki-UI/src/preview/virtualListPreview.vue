@@ -25,6 +25,11 @@ const banGDreamList = ref([
   },
   {
     url: "https://img.moegirl.org.cn/common/thumb/0/02/Bandori_Saaya_icon.png/60px-Bandori_Saaya_icon.png",
+    name: "山吹沙绫",
+    bang: "Poppin' Party"
+  },
+  {
+    url: "https://img.moegirl.org.cn/common/thumb/3/38/Bandori_Arisa_icon.png/60px-Bandori_Arisa_icon.png",
     name: "市谷有咲",
     bang: "Poppin' Party"
   },
