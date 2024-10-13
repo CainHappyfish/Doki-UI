@@ -82,6 +82,11 @@ const banGDreamList = ref([
     name: "椎名立希",
     bang: "Mygo!!!!!"
   },
+  {
+    url: "https://img.moegirl.org.cn/common/thumb/8/8c/Shiina_Taki_icon.png/60px-Shiina_Taki_icon.png",
+    name: "椎名立希",
+    bang: "Mygo!!!!!"
+  }
 
 
 
