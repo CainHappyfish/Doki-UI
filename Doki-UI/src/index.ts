@@ -12,15 +12,16 @@ import dokiAvatar from "./components/avatar/dokiAvatar.vue";
 import dokiCarousel from "./components/carousel/dokiCarousel.vue"
 import dokiCarouselItem from "./components/carousel/dokiCarouselItem.vue"
 import dokiAccordion from "./components/carousel/dokiAccordion.vue"
+import dokiAccordionItem from "./components/carousel/dokiAccordionItem.vue";
 import dokiImage from "./components/image/dokiImage.vue";
 import dokiTag from "./components/tag/dokiTag.vue";
 import dokiVirtualList from "./components/virtualList/dokiVirtualList.vue";
+import dokiVirtualListItem from "./components/virtualList/dokiVirtualListItem.vue";
+import dokiPagination from "./components/pagination/dokiPagination.vue";
+import dokiUpload from "./components/upload/dokiUpload.vue"
 
 
 import type { App } from 'vue'
-import dokiVirtualListItem from "./components/virtualList/dokiVirtualListItem.vue";
-import dokiPagination from "./components/pagination/dokiPagination.vue";
-import dokiAccordionItem from "./components/carousel/dokiAccordionItem.vue";
 
 
 const components = [
@@ -43,7 +44,8 @@ const components = [
     dokiTag,
     dokiVirtualList,
     dokiVirtualListItem,
-    dokiPagination
+    dokiPagination,
+    dokiUpload,
 
 ]
 
