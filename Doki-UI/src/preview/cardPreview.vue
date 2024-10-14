@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
-import DokiCard from "../../components/card/dokiCard.vue";
+import DokiCard from "../components/card/dokiCard.vue";
 
-import aimi from "../public/658BAB2BE9BDB31F274E68DDC880D4DB.jpg"
+import aimi from "./public/658BAB2BE9BDB31F274E68DDC880D4DB.jpg"
 </script>
 
 <template>
