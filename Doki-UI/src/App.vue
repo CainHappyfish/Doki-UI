@@ -20,6 +20,7 @@ import BreadCrumbPreview from "./preview/breadCrumbPreview.vue";
 import DividerPreview from "./preview/dividerPreview.vue";
 import NavBarPreview from "./preview/navBarPreview.vue";
 import MenuPreview from "./preview/menuPreview.vue";
+import StepsPreview from "./preview/stepsPreview.vue";
 
 </script>
 
@@ -45,6 +46,7 @@ import MenuPreview from "./preview/menuPreview.vue";
   <divider-preview />
   <nav-bar-preview />
   <menu-preview />
+  <steps-preview />
 
   <doki-backtop />
 </template>

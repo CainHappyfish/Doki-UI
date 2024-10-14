@@ -29,6 +29,8 @@ import dokiDivider from "./components/divider/dokiDivider.vue";
 import dokiNavbar from "./components/navBar/dokiNavbar.vue"
 import dokiDropdownItem from "./components/menus/global/dokiDropdownItem.vue";
 import dokiDropdown from "./components/menus/dokiDropdown.vue";
+import dokiSteps from "./components/steps/dokiSteps.vue";
+import dokiStep from "./components/steps/dokiStep.vue";
 
 
 import type { App } from 'vue'
@@ -67,6 +69,8 @@ const components = [
     dokiNavbar,
     dokiDropdown,
     dokiDropdownItem,
+    dokiSteps,
+    dokiStep,
 ]
 
 export function install(app: App): void {
