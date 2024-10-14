@@ -1,0 +1,23 @@
+.doki-backtop {
+  position: fixed;
+
+  bottom: 0;
+  right: 0;
+
+  margin: 10px;
+  z-index: 123;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+
+  filter: drop-shadow(0 0 2px cyan);
+}

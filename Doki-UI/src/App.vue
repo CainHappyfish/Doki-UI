@@ -17,6 +17,7 @@ import CardPreview from "./preview/cardPreview.vue";
 import LayoutPreview from "./preview/layoutPreview.vue";
 import PageHeaderPreview from "./preview/pageHeaderPreview.vue";
 import BreadCrumbPreview from "./preview/breadCrumbPreview.vue";
+
 </script>
 
 <template>
@@ -38,7 +39,7 @@ import BreadCrumbPreview from "./preview/breadCrumbPreview.vue";
   <layout-preview />
   <bread-crumb-preview />
   <page-header-preview />
-
+  <doki-backtop />
 </template>
 
 <style scoped>

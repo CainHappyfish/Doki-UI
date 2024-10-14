@@ -23,7 +23,8 @@ import dokiCard from "./components/card/dokiCard.vue";
 import dokiRow from "./components/layout/dokiRow.vue"
 import dokiCol from "./components/layout/dokiCol.vue"
 import dokiBreadCrumb from "./components/breadCrumb/dokiBreadcrumb.vue";
-import dokiPageHeader from "./components/pageHeader/dokiPageHeader.vue"
+import dokiPageHeader from "./components/pageHeader/dokiPageHeader.vue";
+import dokiBacktop from "./components/backtop/dokiBacktop.vue"
 
 
 import type { App } from 'vue'
@@ -57,7 +58,7 @@ const components = [
     dokiCol,
     dokiBreadCrumb,
     dokiPageHeader,
-
+    dokiBacktop,
 ]
 
 export function install(app: App): void {
