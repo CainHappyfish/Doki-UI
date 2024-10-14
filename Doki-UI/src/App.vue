@@ -13,7 +13,8 @@ import TagPreview from "./preview/tagPreview.vue";
 import VirtualListPreview from "./preview/virtualListPreview.vue";
 import PaginationPreview from "./preview/paginationPreview.vue";
 import UploadPreview from "./preview/uploadPreview.vue";
-import CardPreview from "./preview/public/cardPreview.vue";
+import CardPreview from "./preview/cardPreview.vue";
+import LayoutPreview from "./preview/layoutPreview.vue";
 </script>
 
 <template>
@@ -32,6 +33,7 @@ import CardPreview from "./preview/public/cardPreview.vue";
   <pagination-preview />
   <upload-preview />
   <card-preview />
+  <layout-preview />
 
 </template>
 

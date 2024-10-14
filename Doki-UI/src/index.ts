@@ -20,6 +20,8 @@ import dokiVirtualListItem from "./components/virtualList/dokiVirtualListItem.vu
 import dokiPagination from "./components/pagination/dokiPagination.vue";
 import dokiUpload from "./components/upload/dokiUpload.vue"
 import dokiCard from "./components/card/dokiCard.vue";
+import dokiRow from "./components/layout/dokiRow.vue"
+import dokiCol from "./components/layout/dokiCol.vue"
 
 
 import type { App } from 'vue'
@@ -48,6 +50,8 @@ const components = [
     dokiPagination,
     dokiUpload,
     dokiCard,
+    dokiRow,
+    dokiCol,
 
 ]
 
