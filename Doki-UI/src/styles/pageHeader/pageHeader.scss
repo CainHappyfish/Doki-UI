@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     .doki-page-header__back {
+      cursor: pointer;
       position: relative;
       min-width: 100px;
       height: 30px;
