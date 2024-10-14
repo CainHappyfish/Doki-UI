@@ -1,0 +1,44 @@
+.doki-divider {
+  display: flex;
+  align-items: center;
+  height: 0;
+
+  margin: 20px 0;
+
+  .doki-divider__left {
+    flex: 1;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+  }
+
+  .doki-divider__right {
+    flex: 1;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+  }
+
+  .doki-divider__content {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.doki-divider__horizontal {
+  flex-direction: row;
+  width: 100%;
+}
+
+.doki-divider__vertical {
+  flex-direction: column;
+  width: 0;
+  height: 100%;
+
+  margin: 0 20px;
+}
+
+.content__left {
+  max-width: 10%;
+}
+
+.content__right {
+  min-width: 85%;
+}
