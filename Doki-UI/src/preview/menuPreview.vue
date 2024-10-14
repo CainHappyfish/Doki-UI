@@ -57,6 +57,8 @@ import downIcon from "./public/down.svg"
   img {
     width: 20px;
     height: 20px;
+
+    margin: 10px 0;
   }
 }
 
