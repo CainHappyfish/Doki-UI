@@ -1,0 +1,52 @@
+.doki-card {
+  width: 400px;
+
+  border-radius: 2px;
+  border: 1px solid rgba(0, 255, 255, 0.6);
+
+  transition: all 0.2s ease-in-out;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+}
+
+.doki-card__header {
+  width: 100%;
+  //border-bottom: 1px solid rgba(0, 255, 255, 0.6);
+  background: white;
+
+  padding: 5px 10px;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.doki-card__body {
+  width: 100%;
+  background: white;
+
+  padding: 5px 10px;
+  box-sizing: border-box;
+
+}
+
+.doki-card__footer {
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  background: white;
+
+  //border-top: 1px solid rgba(0, 255, 255, 0.6);
+}
+
+.doki-card__hover {
+  &:hover {
+    filter: drop-shadow(0 0 1px rgb(0, 255, 255));
+  }
+}
+
+.doki-card__always {
+
+  filter: drop-shadow(0 0 2px rgb(0, 255, 255));
+
+}
