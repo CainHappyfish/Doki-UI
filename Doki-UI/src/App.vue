@@ -18,6 +18,8 @@ import LayoutPreview from "./preview/layoutPreview.vue";
 import PageHeaderPreview from "./preview/pageHeaderPreview.vue";
 import BreadCrumbPreview from "./preview/breadCrumbPreview.vue";
 import DividerPreview from "./preview/dividerPreview.vue";
+import NavBarPreview from "./preview/navBarPreview.vue";
+import MenuPreview from "./preview/menuPreview.vue";
 
 </script>
 
@@ -41,6 +43,9 @@ import DividerPreview from "./preview/dividerPreview.vue";
   <bread-crumb-preview />
   <page-header-preview />
   <divider-preview />
+  <nav-bar-preview />
+  <menu-preview />
+
   <doki-backtop />
 </template>
 

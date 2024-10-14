@@ -26,6 +26,9 @@ import dokiBreadCrumb from "./components/breadCrumb/dokiBreadcrumb.vue";
 import dokiPageHeader from "./components/pageHeader/dokiPageHeader.vue";
 import dokiBacktop from "./components/backtop/dokiBacktop.vue";
 import dokiDivider from "./components/divider/dokiDivider.vue";
+import dokiNavbar from "./components/navBar/dokiNavbar.vue"
+import dokiDropdownItem from "./components/menus/global/dokiDropdownItem.vue";
+import dokiDropdown from "./components/menus/dokiDropdown.vue";
 
 
 import type { App } from 'vue'
@@ -60,7 +63,10 @@ const components = [
     dokiBreadCrumb,
     dokiPageHeader,
     dokiBacktop,
-    dokiDivider
+    dokiDivider,
+    dokiNavbar,
+    dokiDropdown,
+    dokiDropdownItem,
 ]
 
 export function install(app: App): void {

@@ -69,24 +69,7 @@ const handleClean = () => {
   position: relative;
 }
 
-.hide {
-  animation: linear 0.1s hide;
-}
 
-@keyframes hide {
-  0% {
-    opacity: 100%;
-  }
-  33% {
-    opacity: 66%;
-  }
-  66% {
-    opacity: 33%;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
 .clean-icon {
   width: 30px;

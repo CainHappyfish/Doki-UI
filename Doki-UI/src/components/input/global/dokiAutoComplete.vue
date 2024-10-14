@@ -77,20 +77,7 @@ const handleAutoFill = (event: MouseEvent, index: number) => {
   background: rgba(187, 187, 187, 0.2);
 }
 
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 33%;
-  }
-  66% {
-    opacity: 66%;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 
 

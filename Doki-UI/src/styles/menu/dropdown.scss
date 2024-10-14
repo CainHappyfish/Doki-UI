@@ -1,0 +1,58 @@
+.doki-dropdown {
+  display: flex;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+
+  position: relative;
+
+  .doki-dropdown__trigger {
+    cursor: pointer;
+
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .doki-dropdown__menu {
+    min-width: 140px;
+    filter: drop-shadow(0 0 2px cyan);
+    border-radius: 5px;
+
+
+    position: absolute;
+    top: 40px;
+    background: white;
+
+    padding: 5px;
+
+    transition: all 0.3s ease-in-out;
+    animation: linear 0.2s show;
+  }
+
+  .hide {
+    animation: linear 0.1s hide;
+  }
+}
+
+.doki-dropdown-item {
+
+  border-radius: 5px;
+  padding: 5px;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: rgba(187, 187, 187, 0.7);
+  }
+
+
+}
+
+.disabled-item {
+  cursor: not-allowed;
+  color: #BBBBBB;
+
+  &:hover {
+    background: white;
+  }
+}
