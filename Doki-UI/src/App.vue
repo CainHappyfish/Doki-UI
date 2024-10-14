@@ -15,6 +15,8 @@ import PaginationPreview from "./preview/paginationPreview.vue";
 import UploadPreview from "./preview/uploadPreview.vue";
 import CardPreview from "./preview/cardPreview.vue";
 import LayoutPreview from "./preview/layoutPreview.vue";
+import PageHeaderPreview from "./preview/pageHeaderPreview.vue";
+import BreadCrumbPreview from "./preview/breadCrumbPreview.vue";
 </script>
 
 <template>
@@ -34,6 +36,8 @@ import LayoutPreview from "./preview/layoutPreview.vue";
   <upload-preview />
   <card-preview />
   <layout-preview />
+  <bread-crumb-preview />
+  <page-header-preview />
 
 </template>
 

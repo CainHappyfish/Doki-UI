@@ -144,7 +144,7 @@
       </doki-row>
 
     </div>
-    
+
     <h3 class="title-3">Mix Layout</h3>
     <div class="layout-preview">
       <doki-row :gap="10">

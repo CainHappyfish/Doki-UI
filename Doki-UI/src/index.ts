@@ -22,9 +22,12 @@ import dokiUpload from "./components/upload/dokiUpload.vue"
 import dokiCard from "./components/card/dokiCard.vue";
 import dokiRow from "./components/layout/dokiRow.vue"
 import dokiCol from "./components/layout/dokiCol.vue"
+import dokiBreadCrumb from "./components/breadCrumb/dokiBreadcrumb.vue";
+import dokiPageHeader from "./components/pageHeader/dokiPageHeader.vue"
 
 
 import type { App } from 'vue'
+
 
 
 const components = [
@@ -52,6 +55,8 @@ const components = [
     dokiCard,
     dokiRow,
     dokiCol,
+    dokiBreadCrumb,
+    dokiPageHeader,
 
 ]
 

@@ -1,7 +1,5 @@
 <script setup lang="ts">
 
-import DokiAvatar from "../components/avatar/dokiAvatar.vue";
-
 </script>
 
 <template>

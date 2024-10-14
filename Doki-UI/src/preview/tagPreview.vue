@@ -18,7 +18,7 @@
       <doki-tag type="primary" closable>primary</doki-tag>
       <doki-tag type="success" closable>success</doki-tag>
       <doki-tag type="warning" closable>warning</doki-tag>
-      <doki-tag type="danger"closable>danger</doki-tag>
+      <doki-tag type="danger" closable>danger</doki-tag>
     </div>
 
 
