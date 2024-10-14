@@ -5,8 +5,8 @@
    width: 600px;
 }
 
-.doki-step {
 
+.doki-step {
 
   .doki-step__header {
     display: flex;
@@ -56,6 +56,51 @@
       border-color: cyan;
     }
   }
+
+}
+
+.doki-steps__vertical {
+  display: flex;
+  flex-direction: column;
+
+  width: 50px;
+  min-height: 450px;
+
+  .doki-step {
+    position: relative;
+    .doki-step__header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .progress {
+      height: 150px;
+      width: 0;
+      border: 2px solid #BBBBBB;
+
+      transition: all 0.3s linear;
+
+    }
+    .step-active {
+      border-color: rgb(119, 153, 119);
+
+      img {
+        opacity: 1;
+      }
+    }
+
+    .step-wait {
+      border-color: cyan;
+    }
+
+    .doki-step__info {
+      position: absolute;
+      min-width: 100px;
+      top: 5px;
+      left: 50px;
+    }
+  }
+
 
 }
 

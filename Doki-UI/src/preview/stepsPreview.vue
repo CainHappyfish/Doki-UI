@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {ref} from "vue";
 import DokiSteps from "../components/steps/dokiSteps.vue";
+import DokiStep from "../components/steps/dokiStep.vue";
 
 const active = ref(0)
 
@@ -12,13 +13,25 @@ const onClick = () => {
 <template>
   <div class="steps-container">
     <h2 class="title-2">steps</h2>
-    <doki-steps :active="active">
-      <doki-step title="Step 1" />
-      <doki-step title="Step 2" />
-      <doki-step title="Step 3" />
-    </doki-steps>
+    <div class="steps">
+      <h3 class="title-3">Horizontal</h3>
+      <doki-steps :active="active">
+        <doki-step title="Step 1" description="description 1"/>
+        <doki-step title="Step 2" description="description 2"/>
+        <doki-step title="Step 3" description="description 3"/>
+      </doki-steps>
+    </div>
 
-    <doki-button type="primary" @click="onClick"> next </doki-button>
+    <div class="steps">
+      <h3 class="title-3">Vertical</h3>
+      <doki-steps :active="active" type="vertical">
+        <doki-step title="Step 1" description="description 1"/>
+        <doki-step title="Step 2" description="description 2"/>
+        <doki-step title="Step 3" description="description 3"/>
+      </doki-steps>
+
+      <doki-button type="primary" @click="onClick"> next </doki-button>
+    </div>
   </div>
 </template>
 
@@ -35,6 +48,10 @@ const onClick = () => {
   padding: 5px;
   box-sizing: border-box;
 
+}
+
+.steps {
+  margin: 10px 0;
 }
 
 .doki-button {

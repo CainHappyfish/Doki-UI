@@ -22,12 +22,14 @@ const description = ref(useAttrs().description ? useAttrs().description : "");
       <div class="progress" />
     </div>
 
-    <div class="doki-step__title">
-      {{ title }}
-    </div>
+    <div class="doki-step__info">
+      <div class="doki-step__title">
+        {{ title }}
+      </div>
 
-    <div class="doki-step__description">
-      {{ description }}
+      <div class="doki-step__description" v-if="description">
+        {{ description }}
+      </div>
     </div>
   </div>
 </template>
