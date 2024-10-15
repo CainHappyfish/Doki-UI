@@ -18,7 +18,7 @@ const centerClick = () => {
     <h2 class="title-2">dialog</h2>
     <div class="dialog">
       <h3 class="title-3">Default Dialog</h3>
-      <doki-button @click="click">show dialog</doki-button>
+      <doki-button @click="click">dialog</doki-button>
       <doki-dialog v-model="visible">
         <template #header>info</template>
         <template #content>This is a message.</template>
@@ -27,7 +27,7 @@ const centerClick = () => {
 
     <div class="dialog">
       <h3 class="title-3">Center Dialog</h3>
-      <doki-button @click="centerClick">center dialog</doki-button>
+      <doki-button @click="centerClick">center</doki-button>
       <doki-dialog v-model="centerVisible" center>
         <template #header>info</template>
         <template #content>This is a message.</template>
