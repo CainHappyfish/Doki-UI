@@ -32,10 +32,11 @@ import dokiDropdown from "./components/menus/dokiDropdown.vue";
 import dokiSteps from "./components/steps/dokiSteps.vue";
 import dokiStep from "./components/steps/dokiStep.vue";
 import dokiProgress from "./components/progress/dokiProgress.vue"
-
-import type { App } from 'vue'
 import dokiAlert from "./components/alert/dokiAlert.vue";
 import dokiDialog from "./components/dialog/dokiDialog.vue";
+import dokiMessage from "./components/message/dokiMessage.vue";
+
+import type { App } from 'vue'
 
 
 
@@ -76,6 +77,7 @@ const components = [
     dokiProgress,
     dokiAlert,
     dokiDialog,
+    dokiMessage,
 ]
 
 export function install(app: App): void {
