@@ -11,6 +11,7 @@
   align-items: center;
 
   transition: all 0.3s ease-in-out;
+  animation: linear 0.2s show;
 
   position: fixed;
   top: 0;
@@ -98,11 +99,3 @@
   }
 }
 
-.doki-message__hide-enter-active, .doki-message__hide-leave-active,{
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
-}
-
-.doki-message__hide-enter-from, .doki-message__hide-leave-to,{
-  opacity: 0;
-}

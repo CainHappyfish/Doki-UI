@@ -26,6 +26,7 @@ import AlertPreview from "./preview/alertPreview.vue";
 import DialogPreview from "./preview/dialogPreview.vue";
 import Message from "./components/message/dokiMessage.vue";
 import MessagePreview from "./preview/messagePreview.vue";
+import MessageBoxPreivew from "./preview/messageBoxPreivew.vue";
 
 </script>
 
@@ -56,6 +57,7 @@ import MessagePreview from "./preview/messagePreview.vue";
   <alert-preview />
   <dialog-preview />
   <message-preview />
+  <message-box-preivew />
 
   <doki-backtop />
 </template>

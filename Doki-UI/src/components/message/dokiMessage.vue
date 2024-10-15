@@ -2,11 +2,11 @@
 import {computed, onMounted, ref, useAttrs} from "vue";
 import { useResizeObserver } from '@vueuse/core'
 
-import defaultIcon from "./public/star-fill.svg"
-import infoIcon from "./public/info.svg"
-import successIcon from "./public/success.svg"
-import warningIcon from "./public/warning.svg"
-import dangerIcon from "./public/danger.svg"
+import defaultIcon from "../public/star-fill.svg"
+import infoIcon from "../public/info.svg"
+import successIcon from "../public/success.svg"
+import warningIcon from "../public/warning.svg"
+import dangerIcon from "../public/danger.svg"
 import {messageProps} from "./types.ts";
 import {getLastOffset, getOffsetOrSpace} from "./instance.ts";
 

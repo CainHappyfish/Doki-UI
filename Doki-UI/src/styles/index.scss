@@ -23,6 +23,7 @@
 @use "alert/alertIndex";
 @use "dialog/dialogIndex";
 @use "message/messageIndex";
+@use "messageBox/messageBoxIndex";
 
 .title-2 {
   margin: 5px;
@@ -66,4 +67,13 @@
   100% {
     opacity: 1;
   }
+}
+
+.doki-message__hide-enter-active, .doki-message__hide-leave-active,{
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.doki-message__hide-enter-from, .doki-message__hide-leave-to,{
+  opacity: 0;
 }
