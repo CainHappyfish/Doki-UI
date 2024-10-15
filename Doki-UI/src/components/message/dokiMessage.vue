@@ -23,6 +23,8 @@ const visible = ref(true)
 
 // console.log(props.type)
 const icon = computed(() => {
+  if (props.icon) return props.icon
+
   if (props.type === "info") {
     return infoIcon
   } else if (props.type === "success") {
