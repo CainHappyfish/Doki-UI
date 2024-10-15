@@ -1,13 +1,13 @@
 import { isFunction } from '@vue/shared';
 import {createVNode, isVNode, render} from "vue";
 import MessageConstructor from "./dokiMessage.vue"
-import {ButtonProps} from "./types.ts";
-import {instances, MessageContext} from "./instance.ts";
+import {MessageOptions} from "./types.ts";
+import {instances} from "./instance.ts";
 import dokiMessage from "./dokiMessage.vue";
 
 let seed = 1
 
-const message = (options: Partial<ButtonProps>) => {
+const message = (options: Partial<MessageOptions>) => {
     const instance = createMessage(options)
 
     instances.push(instance)
@@ -16,7 +16,7 @@ const message = (options: Partial<ButtonProps>) => {
     return instance.handler;
 }
 
-function createMessage(options: Partial<ButtonProps>) {
+function createMessage(options: Partial<MessageOptions>) {
     const id = `message_${seed++}`;
     const container = document.createElement('div')
 

@@ -53,7 +53,7 @@ export const messageProps = {
 };
 
 // 利用值反推出Button属性类型
-export type ButtonProps = ExtractPropTypes<typeof messageProps>;
+export type MessageOptions = ExtractPropTypes<typeof messageProps>;
 
 export interface MessageHandler {
     /**
