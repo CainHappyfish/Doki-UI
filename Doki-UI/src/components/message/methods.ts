@@ -1,26 +1,19 @@
 import { isFunction } from '@vue/shared';
 import {createVNode, isVNode, render} from "vue";
 import MessageConstructor from "./dokiMessage.vue"
-import {ButtonProps, dokiMessageOptions} from "./types.ts";
+import {ButtonProps} from "./types.ts";
 import {instances, MessageContext} from "./instance.ts";
 import dokiMessage from "./dokiMessage.vue";
 
 let seed = 1
 
-const message = (options: dokiMessageOptions | string) => {
+const message = (options: Partial<ButtonProps>) => {
     const instance = createMessage(options)
 
     instances.push(instance)
 
     // console.log('container', instance.id);
     return instance.handler;
-}
-
-const closeMessage = (instance: MessageContext) => {
-    const index = instances.indexOf(instance)
-    instances.splice(index, 1);
-    const { handler } = instance;
-    handler.close();
 }
 
 function createMessage(options: Partial<ButtonProps>) {
@@ -31,8 +24,9 @@ function createMessage(options: Partial<ButtonProps>) {
         ...options,
         id,
         onClose: () => {
-            options.onClose?.()
-            closeMessage(instance)
+            if (options.onClose) {
+                options.onClose()
+            }
         },
         onDestroy: () => {
             // 删除实例

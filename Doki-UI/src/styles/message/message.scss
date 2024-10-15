@@ -1,7 +1,7 @@
 @use "../vars/message";
 
 .doki-message {
-  width: 200px;
+  width: 300px;
   max-width: 600px;
   height: 40px;
 
@@ -31,12 +31,34 @@
     font-family: "Microsoft YaHei UI Light", sans-serif;
     color: var(--doki-message-text-default);
   }
+
+  svg {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 5px;
+    cursor: pointer;
+
+    path {
+      fill: var(--doki-message-text-default);
+    }
+  }
+}
+
+.center {
+  justify-content: center;
 }
 
 .doki-message__success {
   background: var(--doki-message-success-bg);
   .doki-message__content {
-    color: var(--doki-message-success-text);
+    color: var(--doki-message-text-success);
+  }
+
+  svg {
+    path {
+      fill: var(--doki-message-text-success);
+    }
   }
 }
 
@@ -45,6 +67,11 @@
   .doki-message__content {
     color: var(--doki-message-info-text);
   }
+  svg {
+    path {
+      fill: var(--doki-message-text-info);
+    }
+  }
 }
 
 .doki-message__warning {
@@ -52,12 +79,22 @@
   .doki-message__content {
     color: var(--doki-message-warning-text);
   }
+  svg {
+    path {
+      fill: var(--doki-message-text-warning);
+    }
+  }
 }
 
 .doki-message__danger {
   background: var(--doki-message-danger-bg);
   .doki-message__content {
     color: var(--doki-message-danger-text);
+  }
+  svg {
+    path {
+      fill: var(--doki-message-text-danger);
+    }
   }
 }
 

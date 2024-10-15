@@ -12,7 +12,7 @@ export const messageProps = {
     },
     type: {
         type: String as PropType<messageTypes>,
-        default: 'info'
+        default: 'default'
     },
     icon: {
         type: [String, Object, Function] as PropType<string | Component>,
@@ -25,6 +25,10 @@ export const messageProps = {
     duration: {
         type: Number as PropType<number>,
         default: 3000
+    },
+    center: {
+        type: Boolean as PropType<boolean>,
+        default: false
     },
     showClose: {
         type: Boolean as PropType<boolean>,
