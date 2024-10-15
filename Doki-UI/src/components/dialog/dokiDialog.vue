@@ -1,6 +1,8 @@
 <script setup lang="ts">
 
-import {ref} from "vue";
+import {ref, useAttrs} from "vue";
+
+const isCenter = ref(useAttrs().center === "" ? "center" : "")
 
 const model = defineModel<boolean>()
 
@@ -13,7 +15,7 @@ const handleClick = () =>  {
 </script>
 
 <template>
- <div class="doki-dialog__container" v-if="model">
+ <div class="doki-dialog__container" v-if="model" :class="isCenter">
    <div class=doki-dialog>
      <div class="doki-dialog__header">
        <slot name="header"></slot>
