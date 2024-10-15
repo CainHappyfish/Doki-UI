@@ -23,6 +23,7 @@ import MenuPreview from "./preview/menuPreview.vue";
 import StepsPreview from "./preview/stepsPreview.vue";
 import ProgressPreview from "./preview/progressPreview.vue";
 import AlertPreview from "./preview/alertPreview.vue";
+import DialogPreview from "./preview/dialogPreview.vue";
 
 </script>
 
@@ -51,6 +52,7 @@ import AlertPreview from "./preview/alertPreview.vue";
   <progress-preview />
   <upload-preview />
   <alert-preview />
+  <dialog-preview />
 
   <doki-backtop />
 </template>

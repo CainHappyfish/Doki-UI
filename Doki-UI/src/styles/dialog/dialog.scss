@@ -1,0 +1,97 @@
+.doki-dialog__container {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  z-index: 11111;
+  background: rgba(0, 0, 0, 0.4);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+
+  animation: linear 0.3s show;
+}
+
+.doki-dialog {
+  width: 500px;
+  height: 200px;
+
+  position: relative;
+  border-radius: 3px;
+  background: white;
+  animation: linear 0.2s slide;
+  transition: linear 0.02s all;
+  transform: translateY(100%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(10%);
+    }
+    20% {
+      transform: translateY(20%);
+    }
+    30% {
+      transform: translateY(30%);
+    }
+    40% {
+      transform: translateY(40%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    60% {
+      transform: translateY(60%);
+    }
+    70% {
+      transform: translateY(70%);
+    }
+    80% {
+      transform: translateY(80%);
+    }
+    90% {
+      transform: translateY(90%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    cursor: pointer;
+
+    path {
+      fill: #BBBBBB;
+    }
+  }
+
+  .doki-dialog__header {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .doki-dialog__content {
+
+  }
+}
