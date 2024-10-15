@@ -101,6 +101,11 @@
   justify-content: center;
   align-items: center;
 
-  transform: translateY(0%);
+  .doki-dialog {
+    transform: translateY(0);
+    animation: linear 0.3s show;
+  }
 
 }
+
+
