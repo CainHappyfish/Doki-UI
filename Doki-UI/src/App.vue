@@ -21,6 +21,7 @@ import DividerPreview from "./preview/dividerPreview.vue";
 import NavBarPreview from "./preview/navBarPreview.vue";
 import MenuPreview from "./preview/menuPreview.vue";
 import StepsPreview from "./preview/stepsPreview.vue";
+import ProgressPreview from "./preview/progressPreview.vue";
 
 </script>
 
@@ -38,7 +39,6 @@ import StepsPreview from "./preview/stepsPreview.vue";
   <tag-preview />
   <virtual-list-preview />
   <pagination-preview />
-  <upload-preview />
   <card-preview />
   <layout-preview />
   <bread-crumb-preview />
@@ -47,6 +47,8 @@ import StepsPreview from "./preview/stepsPreview.vue";
   <nav-bar-preview />
   <menu-preview />
   <steps-preview />
+  <progress-preview />
+  <upload-preview />
 
   <doki-backtop />
 </template>

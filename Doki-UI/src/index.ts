@@ -31,7 +31,7 @@ import dokiDropdownItem from "./components/menus/global/dokiDropdownItem.vue";
 import dokiDropdown from "./components/menus/dokiDropdown.vue";
 import dokiSteps from "./components/steps/dokiSteps.vue";
 import dokiStep from "./components/steps/dokiStep.vue";
-
+import dokiProgress from "./components/progress/dokiProgress.vue"
 
 import type { App } from 'vue'
 
@@ -71,6 +71,7 @@ const components = [
     dokiDropdownItem,
     dokiSteps,
     dokiStep,
+    dokiProgress,
 ]
 
 export function install(app: App): void {
