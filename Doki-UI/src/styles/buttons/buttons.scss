@@ -2,7 +2,8 @@
 
 .doki-button {
   cursor: pointer;
-  width: 80px;
+  min-width: 80px;
+  max-width: 100px;
   height: 35px;
 
   font-family: "Microsoft YaHei UI Light", sans-serif;
