@@ -22,6 +22,7 @@ import NavBarPreview from "./preview/navBarPreview.vue";
 import MenuPreview from "./preview/menuPreview.vue";
 import StepsPreview from "./preview/stepsPreview.vue";
 import ProgressPreview from "./preview/progressPreview.vue";
+import AlertPreview from "./preview/alertPreview.vue";
 
 </script>
 
@@ -49,6 +50,7 @@ import ProgressPreview from "./preview/progressPreview.vue";
   <steps-preview />
   <progress-preview />
   <upload-preview />
+  <alert-preview />
 
   <doki-backtop />
 </template>
