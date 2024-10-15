@@ -27,6 +27,7 @@ import DialogPreview from "./preview/dialogPreview.vue";
 import Message from "./components/message/dokiMessage.vue";
 import MessagePreview from "./preview/messagePreview.vue";
 import MessageBoxPreivew from "./preview/messageBoxPreivew.vue";
+import NotificationPreview from "./preview/notificationPreview.vue";
 
 </script>
 
@@ -58,6 +59,7 @@ import MessageBoxPreivew from "./preview/messageBoxPreivew.vue";
   <dialog-preview />
   <message-preview />
   <message-box-preivew />
+  <notification-preview />
 
   <doki-backtop />
 </template>
