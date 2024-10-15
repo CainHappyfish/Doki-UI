@@ -13,7 +13,7 @@ watchEffect(() => {
       const slotsElements = slots.default ? slots.default() : [];
       if (slotsElements[0].children) {
         itemLength.value = slotsElements[0].children.length as number;
-        console.log(innerWidth.value);
+        // console.log(innerWidth.value);
       }
     }
   });
