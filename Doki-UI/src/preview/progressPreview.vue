@@ -1,4 +1,20 @@
 <script setup lang="ts">
+import {ref} from "vue";
+
+const progress = ref(0)
+
+const startProgress = () => {
+  if (progress.value === 100) {
+    progress.value = 0
+  }
+  const interval = setInterval(() => {
+    progress.value += 20
+    if (progress.value === 100) {
+      clearInterval(interval)
+    }
+  }, 1000)
+
+}
 
 </script>
 
@@ -23,6 +39,12 @@
       <doki-progress :percentage="80" status="warning" inner/>
       <doki-progress :percentage="20" status="fail" inner/>
 
+    </div>
+
+    <div class="progress">
+      <h3 class="title-3">Progressing</h3>
+      <doki-progress :percentage="progress"/>
+      <doki-button @click="startProgress">start</doki-button>
     </div>
   </div>
 </template>

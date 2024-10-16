@@ -1,11 +1,48 @@
 <script setup lang="ts">
 
 import DokiUpload from "../components/upload/dokiUpload.vue";
-import {ref} from "vue";
 
 import addIcon from "./public/add.svg"
+import dokiMessage from "../components/message/methods.ts";
+import {ref} from "vue";
+const imageUrl = ref('')
 
-// const imgUrl = ref()
+const beforeAvatarUpload = (rawFile: File) => {
+  if (!rawFile) {
+    dokiMessage({
+      type: "warning",
+      message: "Invalid file.",
+    })
+  }
+
+  if (rawFile.type !== 'image/jpeg') {
+    dokiMessage({
+      type: "warning",
+      message: "Avatar picture must be JPG format!"
+    })
+    return false
+  } else if (rawFile.size / 1024 / 1024 > 2) {
+    dokiMessage({
+      type: "warning",
+      message: "Avatar picture size can not exceed 2MB!"
+    })
+    return false
+  }
+  return true
+}
+
+const handleAvatarSuccess = (
+    response: any,
+    uploadFile: File
+) => {
+  // console.log(uploadFile)
+  // imageUrl.value = URL.createObjectURL(uploadFile.raw!)
+  dokiMessage({
+    type: "success",
+    message: "Image processing required."
+  })
+}
+
 </script>
 
 <template>
@@ -21,9 +58,12 @@ import addIcon from "./public/add.svg"
       </doki-upload>
       
     </div>
-    <h3 class="title-3">Avatar Upload</h3>
+    <h3 class="title-3">Example: Avatar Upload</h3>
     <div class="upload">
-      <doki-upload>
+      <doki-upload
+          :before-upload="beforeAvatarUpload"
+          :on-success="handleAvatarSuccess"
+      >
         <template #trigger>
           <div class="avatar-container">
             <img :src="addIcon" alt="add">

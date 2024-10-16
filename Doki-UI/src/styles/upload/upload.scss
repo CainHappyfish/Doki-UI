@@ -26,8 +26,10 @@
     justify-content: center;
 
     .file {
-      max-width: 500px;
-      display: flex;
+      width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 

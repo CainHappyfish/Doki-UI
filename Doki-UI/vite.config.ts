@@ -20,7 +20,8 @@ export default defineConfig({
       '^/api/.*': {
         target: 'http://localhost:3000/',	// 跨源目标
         changeOrigin: true,    // 允许跨域
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        timeout: 60000,  // 设置代理超时时间为 60 秒
       }
     }
   }

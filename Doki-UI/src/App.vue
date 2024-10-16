@@ -24,7 +24,6 @@ import StepsPreview from "./preview/stepsPreview.vue";
 import ProgressPreview from "./preview/progressPreview.vue";
 import AlertPreview from "./preview/alertPreview.vue";
 import DialogPreview from "./preview/dialogPreview.vue";
-import Message from "./components/message/dokiMessage.vue";
 import MessagePreview from "./preview/messagePreview.vue";
 import MessageBoxPreivew from "./preview/messageBoxPreivew.vue";
 import NotificationPreview from "./preview/notificationPreview.vue";
@@ -54,12 +53,13 @@ import NotificationPreview from "./preview/notificationPreview.vue";
   <menu-preview />
   <steps-preview />
   <progress-preview />
-  <upload-preview />
-  <alert-preview />
   <dialog-preview />
   <message-preview />
   <message-box-preivew />
   <notification-preview />
+
+  <upload-preview />
+  <alert-preview />
 
   <doki-backtop />
 </template>
