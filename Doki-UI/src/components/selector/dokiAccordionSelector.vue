@@ -2,13 +2,7 @@
 import {ref} from "vue";
 
 import closeIcon from "../../assets/Close.svg"
-
-interface Data {
-  value: string
-  label: string
-  content: string
-}
-
+import {Data} from "./type";
 
 const props = withDefaults(defineProps<{
   data: Data[]

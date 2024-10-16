@@ -1,6 +1,6 @@
 {
   "name": "doki-ui",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -11,14 +11,15 @@
   "dependencies": {
     "vue": "^3.4.21"
   },
-  "main": "dist/demo-ui.cjs.js",
-  "module": "dist/demo-ui.es.js",
+  "main": "dist/demo-ui.js",
+  "module": "dist/demo-ui.cjs",
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "axios": "^1.7.7",
     "sass": "^1.79.3",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
+    "vite-plugin-dts": "^4.2.4",
     "vue-tsc": "^2.0.6"
   }
 }

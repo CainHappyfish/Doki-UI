@@ -1,35 +1,39 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build:{
+  build: {
     lib: {
       name: 'doki-UI',
       entry: 'src/index.ts',
-      formats: ['cjs', 'es']
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['vue'],
       output: {
-       // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
-       globals: {
-         vue: 'Vue',
-       },
-     },
+        globals: {
+          vue: 'Vue',
+        },
+      },
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    dts({
+      outDir: 'dist/types',
+    }),
+  ],
   server: {
-    // port: 8888,          // 指定开发服务器端口
-    open: true,             // 在开发服务器启动时自动在浏览器中打开应用程序
+    open: true,
     proxy: {
       '^/api/.*': {
-        target: 'http://localhost:3000/',	// 跨源目标
-        changeOrigin: true,    // 允许跨域
+        target: 'http://localhost:3000/',
+        changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
-        timeout: 60000,  // 设置代理超时时间为 60 秒
-      }
-    }
-  }
+        timeout: 60000,
+      },
+    },
+  },
 })

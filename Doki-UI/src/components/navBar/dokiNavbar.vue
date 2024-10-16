@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import {ref, useAttrs} from "vue";
-
-interface navItem {
-  label: string
-  url: string
-  icon?: string
-}
+import {navItem} from "./type";
 
 defineProps<{
   navs: navItem[],

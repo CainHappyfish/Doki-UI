@@ -6,6 +6,12 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
 
+    /* type */
+    "declaration": true,
+    "declarationDir": "types", // 指定类型文件的输出目录
+    "outDir": "dist",          // 指定编译输出目录
+    "emitDeclarationOnly": true, // 只生成声明文件
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

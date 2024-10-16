@@ -2,11 +2,7 @@
 import {nextTick, ref} from "vue";
 
 import separatorIcon from "./public/separator.svg"
-
-interface breadCrumbItem {
-  label: string
-  url?: string
-}
+import {breadCrumbItem} from "./types";
 
 const props = defineProps<{
   items: breadCrumbItem[]

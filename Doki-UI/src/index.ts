@@ -36,15 +36,13 @@ import dokiAlert from "./components/alert/dokiAlert.vue";
 import dokiDialog from "./components/dialog/dokiDialog.vue";
 import dokiMessage from "./components/message/index.ts";
 import dokiMessagebox from "./components/messageBox/index.ts"
-import dokiNotification from "./components/notification/methods.ts"
+import dokiNotification from "./components/notification/index.ts"
 
 import type { App } from 'vue'
 import dokiInput from "./components/input/dokiInput.vue";
 import dokiTable from "./components/table/dokiTable.vue";
 
-
-
-const components = [
+export const components = [
     dokiButton,
     dokiLink,
     dokiAutoFillInput,
@@ -81,9 +79,6 @@ const components = [
     dokiProgress,
     dokiAlert,
     dokiDialog,
-    dokiMessage,
-    dokiMessagebox,
-    dokiNotification,
     dokiInput,
     dokiTable,
 ]
@@ -98,7 +93,9 @@ export function install(app: App): void {
 
 }
 
-export default {
-    install,
-    ...components
+export default install
+export {
+    dokiMessage,
+    dokiMessagebox,
+    dokiNotification
 }
