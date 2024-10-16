@@ -14,7 +14,8 @@ const handleSlideDown = (event: MouseEvent): void => {
     curSlider.value = target.parentElement
     curSliderButton.value = target
   }
-  slideDistance.value = event.clientX - curSlider.value.getBoundingClientRect().left
+  // slideDistance.value = event.clientX - curSlider.value.getBoundingClientRect().left
+  console.log(slideDistance.value)
   curSliderButton.value.style.left = `${slideDistance.value}px`
   document.addEventListener("mousemove", handleSlideMove)
   document.addEventListener("mouseup", handleSlideUp)
