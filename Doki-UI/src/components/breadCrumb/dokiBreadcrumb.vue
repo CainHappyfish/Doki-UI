@@ -15,7 +15,7 @@ const props = defineProps<{
 
 const separator = ref(props.separator ? props.separator : separatorIcon)
 
-const container = ref<HTMLElement | null>()
+// const container = ref<HTMLElement | null>()
 nextTick(() => {
 
 })

@@ -6,7 +6,7 @@ const onAccordionClick = (event: Event) => {
   let target = event.target as HTMLElement;
   const container = target.parentElement as HTMLElement;
   let items = container.querySelectorAll(".doki-accordion-item")
-  if (container.querySelectorAll(".doki-accordion-item").length === 0) {
+  if (container.parentElement && container.querySelectorAll(".doki-accordion-item").length === 0) {
     items = container.parentElement.querySelectorAll(".doki-accordion-item")
     target = container
   }
@@ -21,7 +21,9 @@ const onAccordionClick = (event: Event) => {
 
 onMounted(() => {
   document.querySelectorAll(".doki-accordion-inner").forEach((item) => {
-    item.querySelector(".doki-accordion-item").classList.add("doki-accordion-item__active")
+    if (item) {
+      item.querySelector(".doki-accordion-item")?.classList.add("doki-accordion-item__active")
+    }
   })
 })
 </script>

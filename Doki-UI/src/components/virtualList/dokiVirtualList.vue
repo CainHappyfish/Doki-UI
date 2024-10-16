@@ -13,13 +13,13 @@ const visibleItemLength = computed(() => {
   return itemHeight.value === 0 ? 8 : Math.floor(visibleHeight.value / itemHeight.value)
 })
 const slotContent = slots.default ? slots.default() : []
-const slotVNodes = slotContent[0].children
+const slotVNodes = slotContent[0].children as any[]
 
 // 计算可见的 slot 元素
 const visibleItems = computed(() => {
   // const temp = slotContent[0].children[0]
   // 多渲染一个作为缓冲
-  return slotContent[0].children.slice(start.value, start.value + visibleItemLength.value + 1);
+  return (slotContent[0].children as any[]).slice(start.value, start.value + visibleItemLength.value + 1);
 });
 
 // 缓存
@@ -32,9 +32,6 @@ const cache: cacheData[] = []
 
 // 容器总高度
 const totalHeight = ref(0)
-
-// 当前offset
-const startOffset = ref(0)
 
 // console.log(visibleItems.value)
 // 监控插槽内容并设置元素总数
@@ -79,7 +76,7 @@ onMounted(() => {
     render(vnode, wrapper); // 渲染 vnode 到这个容器中
     const style = getStylesByClassName(vnode.props.class)
     // 计算 item 高度
-    const height = parseInt(style?.height + style?.marginTop + style?.marginBottom)
+    const height = parseInt(style!.height + style!.marginTop + style!.marginBottom)
     if (itemHeight.value === 0) itemHeight.value = height
     itemHeight.value = Math.min(itemHeight.value, height)
     // console.log(itemHeight.value, visibleItemLength.value, visibleItems.value.length)
@@ -93,14 +90,14 @@ onMounted(() => {
   // 获取容器总高度
   if (totalHeight.value === 0) {
     // console.log("total: ", totalHeight.value)
-    slotVNodes.forEach(vnode => {
+    slotVNodes.forEach((vnode: any) => {
       const className = vnode.props.class
       // console.log(className, getStylesByClassName(className)?.height)
-      totalHeight.value = totalHeight.value + parseInt(getStylesByClassName(className)?.height)
+      totalHeight.value = totalHeight.value + parseInt(getStylesByClassName(className)?.height as string)
     })
     // 还需要加上最后一项长度
     const last = slotVNodes[slotVNodes.length-1].props.class
-    totalHeight.value = totalHeight.value + parseInt(getStylesByClassName(last)?.height)
+    totalHeight.value = totalHeight.value + parseInt(getStylesByClassName(last)?.height as string)
 
   }
   // console.log(cache)
@@ -114,7 +111,7 @@ const handleScroll = (event: Event) => {
   const target = event.target as HTMLElement
   const scrollTop = target.scrollTop
   const container = target.querySelector(".doki-virtual-list-container") as HTMLElement
-  const inner = container.querySelector(".doki-virtual-list-inner")
+  const inner = container.querySelector(".doki-virtual-list-inner") as HTMLElement
   // console.log(target.scrollTop)
 
   // 向下滑动时，缓存新的数据
@@ -122,7 +119,9 @@ const handleScroll = (event: Event) => {
   const maxScrollTop = totalHeight.value - visibleHeight.value;
   const translateY = Math.min(scrollTop, maxScrollTop);
 
-  inner.style.transform = `translateY(${translateY}px)`; // 更新滚动位置
+  if (inner) {
+    inner.style.transform = `translateY(${translateY}px)`; // 更新滚动位置
+  }
 
   // container.style.top = scrollTop + 'px'
   start.value = Math.floor(scrollTop / itemHeight.value)

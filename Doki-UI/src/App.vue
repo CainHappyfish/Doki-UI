@@ -28,7 +28,6 @@ import MessagePreview from "./preview/messagePreview.vue";
 import MessageBoxPreivew from "./preview/messageBoxPreivew.vue";
 import NotificationPreview from "./preview/notificationPreview.vue";
 import FormInputPreview from "./preview/formInputPreview.vue";
-import FormPreview from "./preview/formPreview.vue";
 import TablePreview from "./preview/tablePreview.vue";
 
 </script>

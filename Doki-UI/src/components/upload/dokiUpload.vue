@@ -10,7 +10,7 @@ const props = defineProps<{
   beforeUpload?: (rawFile: File) => boolean
   onProgress?: (rawFile: File) => any
   onSuccess?: (response: any, rawFile: File) => any
-  onFail?: (e: Error, rawFile) => any
+  onFail?: (e: Error, rawFile: File) => any
   onDelete?: (rawFile: File) => any
 }>()
 
@@ -23,11 +23,11 @@ const multiple = ref(useAttrs().multiple === "");
 const action = ref(useAttrs().action ? useAttrs().action : "api/")
 // console.log(multiple.value)
 
-let updateInfo = ref<{progress: number, status: stirng}[]>([])
+let updateInfo = ref<{progress: number, status: string}[]>([])
 
 const updateFileList = () => {
   // console.log(props.beforeUpload && !props.beforeUpload(fileInput.value.files[0]))
-  if (props.beforeUpload && !props.beforeUpload(fileInput.value.files[0])) {
+  if (props.beforeUpload && fileInput.value?.files && !props.beforeUpload(fileInput.value.files[0])) {
     return;
   }
   fileList.value.length = 0
@@ -75,7 +75,7 @@ const deleteFile = (event: Event) => {
 
 
 function upload(file: File, index: number) {
-  const progress = ref(0)
+  const uploadProgress = ref(0)
   const status = ref("")
 
   const formData = new FormData()
@@ -93,11 +93,11 @@ function upload(file: File, index: number) {
     timeout: 1000 * 6 * 60,
     onUploadProgress: function progress(event: any) {
       if (event.lengthComputable) {
-        progress.value = Math.floor(event.loaded / event.total * 100)
-        // console.log(`上传进度：${progress.value}%`);
+        uploadProgress.value = Math.floor(event.loaded / event.total * 100)
+        // console.log(`上传进度：${uploadProgress.value}%`);
         // 更新进度信息
         updateInfo.value[index] = {
-          progress: progress.value,
+          progress: uploadProgress.value,
           status: status.value,
         }
       }
@@ -119,10 +119,10 @@ function upload(file: File, index: number) {
         // console.log("fail")
         status.value = "fail"
         updateInfo.value[index] = {
-          progress: progress.value,
+          progress: uploadProgress.value,
           status: status.value,
         }
-        console.log(e)
+        console.error(e)
 
         if (props.onFail) props.onFail(e, file)
 

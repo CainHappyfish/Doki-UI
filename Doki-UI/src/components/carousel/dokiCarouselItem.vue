@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import {useAttrs} from "vue";
+import {ref, useAttrs} from "vue";
+
+const height = ref(useAttrs().height as number|| "")
 </script>
 
 <template>
-  <div class="doki-carousel-item">
+  <div class="doki-carousel-item" :style="{height: height + 'px'}">
     <slot></slot>
   </div>
 </template>

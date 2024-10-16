@@ -4,8 +4,6 @@ import DokiUpload from "../components/upload/dokiUpload.vue";
 
 import addIcon from "./public/add.svg"
 import dokiMessage from "../components/message/methods.ts";
-import {ref} from "vue";
-const imageUrl = ref('')
 
 const beforeAvatarUpload = (rawFile: File) => {
   if (!rawFile) {

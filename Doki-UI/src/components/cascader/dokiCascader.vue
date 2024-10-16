@@ -3,7 +3,7 @@ import DokiCascaderSelection from "./global/dokiCascaderSelection.vue";
 import {computed, onMounted, onUnmounted, ref} from "vue";
 import {cascaderOption} from "../../types";
 
-const props = defineProps<{
+defineProps<{
   options: cascaderOption[]
 }>()
 

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import {computed, ref, watch} from "vue";
-import {preview} from "vite";
+import {computed, ref} from "vue";
 
 const page = ref(1)
 const handlePageChange = (pageIndex: number) => {

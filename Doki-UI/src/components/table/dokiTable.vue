@@ -13,7 +13,7 @@ for (let i = 0; i < props.tableItems.length; i++) {
   tableBodyItems.value.push(row)
 }
 
-const border = ref(useAttrs().border === "")
+// const border = ref(useAttrs().border === "")
 const height = ref(useAttrs().height ? useAttrs().height as number : "")
 const position = computed(() => {
   if (useAttrs().position === "left") {

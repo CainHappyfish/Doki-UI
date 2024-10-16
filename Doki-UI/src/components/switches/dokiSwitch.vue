@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useAttrs } from "vue";
-
 const onClick = (event: Event) => {
   const target = event.target as HTMLElement
   target!.classList.toggle("switched-icon")
