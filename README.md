@@ -24,6 +24,9 @@ npm install -D @vitejs/plugin-vue axios sass typescript vite vite-plugin-dts vue
   createApp(App).use(DokiUI).mount('#app')
   ```
 
+文档施工中...
+
+使用可先参考src文件夹中的preview
 
 version 2 计划中:
 
