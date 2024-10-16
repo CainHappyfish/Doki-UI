@@ -73,6 +73,17 @@ const handleAvatarSuccess = (
       </doki-upload>
       
     </div>
+
+    <h3 class="title-3">Drag to upload</h3>
+    <div class="upload">
+      <doki-upload multiple>
+        <template #trigger>
+          <doki-button type="primary"><span>Upload</span></doki-button>
+        </template>
+
+      </doki-upload>
+
+    </div>
   </div>
 </template>
 

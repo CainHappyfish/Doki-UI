@@ -14,6 +14,7 @@ const props = defineProps<{
   onDelete?: (rawFile: File) => any
 }>()
 
+const draggable = ref(useAttrs().drag === "")
 
 const fileInput = ref<HTMLInputElement | null>(null);
 const fileList = ref<File[]>([]);
@@ -141,7 +142,10 @@ function upload(file: File, index: number) {
 </script>
 
 <template>
-  <div class="doki-upload">
+  <div class="doki-upload__drag" v-if="draggable">
+
+  </div>
+  <div class="doki-upload" v-else>
 <!--    文件选择框-->
     <div class="trigger" @click="click">
       <slot name="trigger"></slot>
@@ -161,6 +165,8 @@ function upload(file: File, index: number) {
 
     <input ref="fileInput" type="file" @change="updateFileList" :multiple="multiple"/>
   </div>
+
+
 </template>
 
 <style scoped>
