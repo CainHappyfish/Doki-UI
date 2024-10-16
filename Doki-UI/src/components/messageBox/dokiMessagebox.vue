@@ -30,12 +30,16 @@ const onCloseClick = () => {
 }
 
 const onConfirm = () => {
-  props.resolveCallback()
+  if (props.resolveCallback) {
+    props.resolveCallback()
+  }
   visible.value = false
 }
 
 const onCancel = () => {
-  if (props.rejectCallback) props.rejectCallback()
+  if (props.rejectCallback) {
+    props.rejectCallback()
+  }
   visible.value = false
 }
 
@@ -54,7 +58,7 @@ defineExpose({
     <div class="doki-messagebox__container" v-show="visible">
       <div class="doki-messagebox">
         <div class="doki-messagebox__title">
-          <img :src="icon" alt="icon">
+          <img :src="icon as string" alt="icon">
           <div class="title">{{ title }}</div>
           <svg  @click="onCloseClick" x="1728033233491"
                viewBox="0 0 1024 1024" version="1.1"

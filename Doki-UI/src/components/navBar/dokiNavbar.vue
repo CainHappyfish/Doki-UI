@@ -7,7 +7,7 @@ interface navItem {
   icon?: string
 }
 
-const props = defineProps<{
+defineProps<{
   navs: navItem[],
 }>()
 

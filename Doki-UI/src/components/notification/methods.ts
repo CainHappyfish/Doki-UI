@@ -3,7 +3,6 @@ import {createVNode, isVNode, render} from "vue";
 import NotificationConstructor from "./dokiNotification.vue"
 import {NotificationOptions} from "./types.ts";
 import {instances} from "./instances.ts";
-import dokiNotification from "./dokiNotification.vue";
 
 let seed = 1
 
@@ -69,4 +68,4 @@ function createNotification(options: Partial<NotificationOptions>) {
 
 }
 
-export default notification as dokiNotification
+export default notification

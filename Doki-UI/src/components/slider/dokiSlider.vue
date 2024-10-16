@@ -15,8 +15,8 @@ const handleSlideDown = (event: MouseEvent): void => {
     curSliderButton.value = target
   }
   // slideDistance.value = event.clientX - curSlider.value.getBoundingClientRect().left
-  console.log(slideDistance.value)
-  curSliderButton.value.style.left = `${slideDistance.value}px`
+  // console.log(slideDistance.value)
+  curSliderButton.value!.style.left = `${slideDistance.value}px`
   document.addEventListener("mousemove", handleSlideMove)
   document.addEventListener("mouseup", handleSlideUp)
 }
@@ -24,8 +24,8 @@ const handleSlideDown = (event: MouseEvent): void => {
 const handleSlideMove = (event: MouseEvent): void => {
   event.preventDefault()
   const sliderMin = 0
-  const sliderMax = curSlider.value?.getBoundingClientRect().right - curSlider.value?.getBoundingClientRect().left - 15
-  slideDistance.value = event.clientX - curSlider.value.getBoundingClientRect().left
+  const sliderMax = curSlider.value!.getBoundingClientRect().right - curSlider.value!.getBoundingClientRect().left - 15
+  slideDistance.value = event.clientX - curSlider.value!.getBoundingClientRect().left
   if (slideDistance.value <= sliderMin) {
     slideDistance.value = sliderMin
   }
@@ -34,7 +34,7 @@ const handleSlideMove = (event: MouseEvent): void => {
   }
   percent.value = Math.floor((slideDistance.value / sliderMax) * 100)
   // console.log('slideMove', percent.value, slideDistance.value / sliderMax)
-  curSliderButton.value.style.left = `${slideDistance.value}px`
+  curSliderButton.value!.style.left = `${slideDistance.value}px`
 
 }
 

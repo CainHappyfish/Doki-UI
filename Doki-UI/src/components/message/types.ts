@@ -1,7 +1,7 @@
-import {ExtractPropTypes, PropType} from "vue";
+import {ExtractPropTypes, PropType, Component ,VNode} from "vue";
 
 export const definePropType = <T>(val: any): PropType<T> => val;
-export type messageTypes = 'default' | 'success' | 'info' | 'warning' | 'error'
+export type messageTypes = 'default' | 'success' | 'info' | 'warning' | 'danger'
 
 export const messageProps = {
     message: {

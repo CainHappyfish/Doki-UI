@@ -3,7 +3,7 @@ import MessageboxConstructor from "./dokiMessagebox.vue";
 import {createVNode, isVNode, render} from "vue";
 import {isFunction} from "@vue/shared";
 
-const messageBox: MessageBox = {}
+
 
 function createMessageBox(options: Partial<MessageBoxOptions>) {
     const container = document.createElement('div')
@@ -42,57 +42,60 @@ function createMessageBox(options: Partial<MessageBoxOptions>) {
         handler,
     }
 }
+const messageBox: MessageBox = {
+    alert: (title: string, message: string, option?: any): Promise<void> => {
+
+        return new Promise((resolve) => {
+            const options: Partial<MessageBoxOptions> = {
+                ...option,
+                title,
+                message,
+                type: "alert",
+                resolveCallback: resolve
+
+            };
+            createMessageBox(options);
+
+        });
+    },
+
+    confirm: (title: string, message: string, option?: any): Promise<boolean> => {
+
+        return new Promise((resolve, reject) => {
+            const options: Partial<MessageBoxOptions> = {
+                ...option,
+                title,
+                message,
+                type: "confirm",
+                rejectCallback: reject,
+                resolveCallback: resolve
+
+            };
+            createMessageBox(options);
+
+        });
+    },
+
+    prompt: (title: string, message: string, option?: any): Promise<boolean> => {
+
+        return new Promise((resolve, reject) => {
+            const options: Partial<MessageBoxOptions> = {
+                ...option,
+                title,
+                message,
+                type: "prompt",
+                rejectCallback: reject,
+                resolveCallback: resolve
+
+            };
+            createMessageBox(options);
+
+        });
+    }
 
 
-messageBox.alert = (title: string, message: string, option?: any): Promise<void> => {
-
-    return new Promise((resolve) => {
-        const options: Partial<MessageBoxOptions> = {
-            ...option,
-            title,
-            message,
-            type: "alert",
-            resolveCallback: resolve
-
-        };
-        createMessageBox(options);
-
-    });
-};
-
-messageBox.confirm = (title: string, message: string, option?: any): Promise<boolean> => {
-
-    return new Promise((resolve, reject) => {
-        const options: Partial<MessageBoxOptions> = {
-            ...option,
-            title,
-            message,
-            type: "confirm",
-            rejectCallback: reject,
-            resolveCallback: resolve
-
-        };
-        createMessageBox(options);
-
-    });
-};
-
-messageBox.prompt = (title: string, message: string, option?: any): Promise<boolean> => {
-
-    return new Promise((resolve, reject) => {
-        const options: Partial<MessageBoxOptions> = {
-            ...option,
-            title,
-            message,
-            type: "prompt",
-            rejectCallback: reject,
-            resolveCallback: resolve
-
-        };
-        createMessageBox(options);
-
-    });
-};
 
 
-export default messageBox as dokiMessageBox
+}
+
+export default messageBox

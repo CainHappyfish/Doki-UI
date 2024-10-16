@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, onMounted, ref, useAttrs} from "vue";
+import {computed, onMounted, ref} from "vue";
 import { useResizeObserver } from '@vueuse/core'
 
 import defaultIcon from "../public/star-fill.svg"
@@ -70,16 +70,23 @@ function timer() {
 }
 
 function destroy() {
-  props.onDestroy()
+  if (props.onDestroy) {
+    props.onDestroy()
+  }
 }
 
 function close() {
   visible.value = false
-  props.onClose()
+  if (props.onClose) {
+    props.onClose()
+  }
 }
 
 const onCloseClick = () => {
   close()
+  setTimeout(() => {
+    destroy()
+  },1000)
 }
 
 defineExpose({
@@ -103,7 +110,7 @@ defineExpose({
 
     >
       <div class="doki-message__icon">
-        <img :src="icon" alt="icon" />
+        <img :src="icon as string" alt="icon" />
       </div>
       <div class="doki-message__content">
         <slot>

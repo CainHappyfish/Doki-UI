@@ -3,7 +3,7 @@ import {onMounted, ref, useAttrs} from "vue";
 import defaultImage from "./defaultImage.jpg";
 
 const initialSize = ref<number[]>();
-const isLazy = ref<string>(useAttrs().lazy === "" ? "lazy" : "eager");
+const isLazy = ref<"lazy" | "eager">(useAttrs().lazy === "" ? "lazy" : "eager");
 const src = ref<string>(useAttrs().src as string || defaultImage);
 const alt = ref<string>(useAttrs().alt as string ? useAttrs().alt as string : "image");
 const size = ref<string>(useAttrs().size as string || "natural");
@@ -67,23 +67,6 @@ const adjustImgSize = (target: HTMLImageElement, measure: number[]) => {
   }
 }
 
-const lazyLoading = (imgs: HTMLImageElement[]) => {
-  const observer = new IntersectionObserver(callback)
-  imgs.forEach((img: HTMLImageElement) => {
-    observer.observe(img);
-  })
-  function callback(entries: any) {
-    entries.forEach((entry: IntersectionObserverEntry) => {
-      console.log(entry)
-      if (entry.isIntersecting) {
-        const image = entry.target as HTMLImageElement
-        image.setAttribute('src', image.getAttribute('lazy_src') as string)
-        observer.unobserve(image)
-        console.log("load")
-      }
-    })
-  }
-}
 </script>
 
 <template>

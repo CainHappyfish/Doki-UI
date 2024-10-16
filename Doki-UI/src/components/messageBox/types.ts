@@ -1,13 +1,14 @@
-import {ExtractPropTypes, PropType} from "vue";
-import {definePropType} from "../message/types.ts";
+import {ExtractPropTypes, PropType, Component, VNode} from "vue";
+// import {definePropType} from "../message/types.ts";
 
-// export type Action = 'confirm' | 'close' | 'cancel'
+export type Action = 'confirm' | 'close' | 'cancel'
 export type MessageBoxType = '' | 'prompt' | 'alert' | 'confirm'
 // export type inputTypes = "text" | "number" | keyword
 
 export interface MessageBox {
-    alert: (title: string, message: string) => Promise<void>
-    confirm: (title: string, message: string) => Promise<boolean>
+    alert: (title: string, message: string, option?: any) => Promise<void>
+    confirm: (title: string, message: string, option?: any) => Promise<boolean>
+    prompt: (title: string, message: string, option?: any) => Promise<boolean>
 }
 
 export const messageBoxProps = {
@@ -56,13 +57,11 @@ export const messageBoxProps = {
         default: 'confirm'
     },
     rejectCallback: {
-        type: definePropType<((value: string, action: Action) => any)
-            | ((action: Action) => any)>(Function),
+        type: Function,
         required: false
     },
     resolveCallback: {
-        type: definePropType<((value: string, action: Action) => any)
-            | ((action: Action) => any)>(Function),
+        type: Function,
         required: false
     },
 

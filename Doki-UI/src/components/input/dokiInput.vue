@@ -4,7 +4,7 @@ import {ref, useAttrs} from "vue";
 defineProps<{
   prefixIcon?: string,
   suffixIcon?: string,
-  inputId: string | number
+  inputId: string
 }>()
 
 const type = ref(useAttrs().type ? useAttrs().type as string : "");

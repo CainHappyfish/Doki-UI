@@ -69,16 +69,23 @@ function timer() {
 }
 
 function destroy() {
-  props.onDestroy()
+  if (props.onDestroy) {
+    props.onDestroy()
+  }
 }
 
 function close() {
   visible.value = false
-  props.onClose()
+  if (props.onClose) {
+    props.onClose()
+  }
 }
 
 const onCloseClick = () => {
   close()
+  setTimeout(() => {
+    destroy()
+  },1000)
 }
 
 defineExpose({
@@ -102,7 +109,7 @@ defineExpose({
 
     >
       <div class="doki-notification__title">
-        <img :src="icon" alt="icon" />
+        <img :src="icon as string" alt="icon" />
         <div class="title">
           {{ title }}
         </div>

@@ -3,7 +3,7 @@ import {
     type ComponentInternalInstance,
     type VNode
 } from 'vue';
-import type { MessageHandler } from './types.ts';
+import type { NotificationHandler } from './types.ts';
 
 export type NotificationContext = {
     id: string

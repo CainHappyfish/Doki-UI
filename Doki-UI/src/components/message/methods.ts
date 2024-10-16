@@ -3,7 +3,6 @@ import {createVNode, isVNode, render} from "vue";
 import MessageConstructor from "./dokiMessage.vue"
 import {MessageOptions} from "./types.ts";
 import {instances} from "./instance.ts";
-import dokiMessage from "./dokiMessage.vue";
 
 let seed = 1
 
@@ -69,4 +68,4 @@ function createMessage(options: Partial<MessageOptions>) {
 
 }
 
-export default message as dokiMessage
+export default message

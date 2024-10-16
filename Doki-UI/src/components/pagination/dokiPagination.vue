@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, ref, useAttrs, watch} from "vue";
+import {computed, ref, useAttrs} from "vue";
 
 import prevIcon from "./public/left.svg"
 import nextIcon from "./public/right.svg"
@@ -16,7 +16,7 @@ if (!useAttrs().total && !useAttrs().perPage) {
 const total = ref(useAttrs().total as number)
 const perPage = ref(useAttrs().perPage as number || 6)
 const totalPage = computed(() => Math.ceil(total.value / perPage.value))
-const visiblePageLength = ref<number>(+useAttrs().visible ? +useAttrs().visible : 6)
+const visiblePageLength = ref<number>(+(useAttrs().visible as string)? +(useAttrs().visible as string) : 6)
 // const fastIndex = ref(useAttrs().fast === "")
 const jumpable = ref(useAttrs().jumpable === "")
 // const short = ref(useAttrs().short === "" ? "short-pagination" : "")
@@ -161,18 +161,18 @@ const onClick = (event: Event) => {
   const end = container.querySelector(".page-end") as HTMLElement
   // console.log(curPages)
   // console.log(totalPage.value, startPageIndex.value, visiblePageLength.value)
-  curIndex.value = +target.textContent
+  curIndex.value = +target.textContent!
   if (totalPage.value - visiblePageLength.value <= 0) {
     start.classList.remove("chosen")
     end.classList.remove("chosen")
     curPages.forEach(page => {
       // console.log(page.textContent, curIndex.value)
       page.classList.remove("chosen")
-      if (+page.textContent === curIndex.value) {
+      if (+page.textContent! === curIndex.value) {
         page.classList.add("chosen")
       }
     })
-  } else if (+target.textContent > totalPage.value - visiblePageLength.value) {
+  } else if (+target.textContent! > totalPage.value - visiblePageLength.value) {
     // 最右侧
     // console.log(target.textContent)
 
@@ -190,7 +190,7 @@ const onClick = (event: Event) => {
       curPages[curIndex.value % (totalPage.value - visiblePageLength.value)].classList.add("chosen")
     }
     // console.log("---------------------------")
-  } else if (+target.textContent <= visiblePageLength.value - 1) {
+  } else if (+target.textContent! <= visiblePageLength.value - 1) {
     // 最左侧
     rightFold.value = true
     startPageIndex.value = 1
@@ -226,7 +226,7 @@ const onClick = (event: Event) => {
 
 const onJump = (e: Event) => {
   const target = e.target as HTMLInputElement
-  const container = target.parentElement.parentElement as HTMLElement
+  const container = target.parentElement!.parentElement as HTMLElement
   const curPages = container.querySelectorAll(".pagination-item")
   const start = container.querySelector(".page-start") as HTMLElement
   const end = container.querySelector(".page-end") as HTMLElement
