@@ -2,8 +2,8 @@
 import {ref, useAttrs} from "vue";
 
 defineProps<{
-  prefixIcon: string,
-  suffixIcon: string,
+  prefixIcon?: string,
+  suffixIcon?: string,
 }>()
 
 const type = ref(useAttrs().type ? useAttrs().type as string : "");
