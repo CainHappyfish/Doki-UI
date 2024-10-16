@@ -39,6 +39,9 @@ import dokiMessagebox from "./components/messageBox/methods.ts"
 import dokiNotification from "./components/notification/methods.ts"
 
 import type { App } from 'vue'
+import dokiForm from "./components/form/dokiForm.vue";
+import dokiFormItem from "./components/form/dokiFormItem.vue";
+import dokiInput from "./components/input/dokiInput.vue";
 
 
 
@@ -81,7 +84,10 @@ const components = [
     dokiDialog,
     dokiMessage,
     dokiMessagebox,
-    dokiNotification
+    dokiNotification,
+    dokiInput,
+    dokiForm,
+    dokiFormItem
 ]
 
 export function install(app: App): void {

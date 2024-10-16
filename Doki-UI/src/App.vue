@@ -27,6 +27,7 @@ import DialogPreview from "./preview/dialogPreview.vue";
 import MessagePreview from "./preview/messagePreview.vue";
 import MessageBoxPreivew from "./preview/messageBoxPreivew.vue";
 import NotificationPreview from "./preview/notificationPreview.vue";
+import FormInputPreview from "./preview/formInputPreview.vue";
 
 </script>
 
@@ -52,14 +53,16 @@ import NotificationPreview from "./preview/notificationPreview.vue";
   <nav-bar-preview />
   <menu-preview />
   <steps-preview />
-  <progress-preview />
   <dialog-preview />
   <message-preview />
   <message-box-preivew />
   <notification-preview />
-
-  <upload-preview />
   <alert-preview />
+
+  <progress-preview />
+  <upload-preview />
+  <form-input-preview />
+  <form-preview />
 
   <doki-backtop />
 </template>
