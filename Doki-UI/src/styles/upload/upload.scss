@@ -17,11 +17,18 @@
     margin: 5px;
 
     font-family: "Microsoft YaHei UI Light", sans-serif;
-    width: 250px;
+    width: 400px;
+
     font-size: 12px;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .file {
+      max-width: 500px;
+      display: flex;
+    }
   }
 
   .delete-icon {

@@ -2,12 +2,14 @@
 import {ref, useAttrs} from "vue";
 
 import deleteIcon from "./public/delete.svg"
+import axios from "axios";
+import DokiProgress from "../progress/dokiProgress.vue";
 
 const fileInput = ref<HTMLInputElement | null>(null);
 const fileList = ref<File[]>([]);
 
 const multiple = ref(useAttrs().multiple === "");
-const action = ref(useAttrs().action ? useAttrs().action : "")
+const action = ref(useAttrs().action ? useAttrs().action : "api/")
 // console.log(multiple.value)
 
 
@@ -15,6 +17,10 @@ const updateFileList = () => {
   if (fileInput.value && fileInput.value.files) {
     // Convert FileList to an array for easier manipulation
     fileList.value = Array.from(fileInput.value.files);
+  }
+
+  for (let i = 0; i < fileList.value.length; i++) {
+    upload(fileList.value[i])
   }
 };
 
@@ -42,6 +48,38 @@ const onDelete = (event: Event) => {
   }
 
 }
+
+
+const progress = ref(0)
+const status = ref("")
+function upload(file: File) {
+  const formData = new FormData()
+  formData.append("name", file.name)
+  formData.append("files", file)
+
+  console.log(formData)
+
+  axios.post(action.value as string, formData, {
+    onUploadProgress: onProgress
+  })
+      .then(() => {
+        // console.log("success")
+        status.value = "success"
+      })
+      .catch(() => {
+        // console.log("fail")
+        status.value = "fail"
+      })
+}
+
+function onProgress(event: any) {
+  if (event.lengthComputable) {
+    progress.value = Math.floor(event.loaded / event.total * 100) //实时获取上传进度
+    console.log(`上传进度：${progress.value}%`);
+  }
+}
+
+
 </script>
 
 <template>
@@ -56,8 +94,11 @@ const onDelete = (event: Event) => {
     </div>
 
     <div class="file-list" v-for="file in fileList">
-      {{ file.name }}
-      <img :src="deleteIcon" alt="delete" class="delete-icon" @click="onDelete">
+      <div class="file">
+        {{ file.name }}
+        <img :src="deleteIcon" alt="delete" class="delete-icon" @click="onDelete">
+      </div>
+      <doki-progress :percentage="progress" :status="status"/>
     </div>
 
     <input ref="fileInput" type="file" @change="updateFileList" :multiple="multiple"/>

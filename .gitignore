@@ -24,3 +24,4 @@ docs/.vitepress/cache
 *.njsproj
 *.sln
 *.sw?
+/node_modules

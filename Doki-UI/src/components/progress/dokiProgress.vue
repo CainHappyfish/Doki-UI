@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, onMounted, ref, useAttrs} from "vue";
+import {computed, ref, useAttrs} from "vue";
 
 import successIcon from "./public/success.svg"
 import failIcon from "./public/fail.svg"
@@ -7,30 +7,30 @@ import warningIcon from "./public/warning.svg"
 
 const props = defineProps<{
   percentage: number
+  status?: string
 }>()
 
 
 const type = ref(useAttrs().type ? "doki-progress__" + useAttrs().type : "");
 const innerText = ref(useAttrs().inner === "")
-const status = ref(useAttrs().status)
+// const status = ref(useAttrs().status || "")
 const statusStyle = ref("")
 const statusIcon = computed(() => {
-  if (status.value === "success") {
+  if (props.status === "success") {
     statusStyle.value = "doki-progress__success"
     return successIcon
   }
-  else if (status.value === "warning") {
+  else if (props.status === "warning") {
     statusStyle.value = "doki-progress__warning"
     return warningIcon
   }
-  else if (status.value === "fail") {
+  else if (props.status === "fail") {
     statusStyle.value = "doki-progress__fail"
     return failIcon
   }
   else {
-    status.value = null
+    return ""
   }
-  return ""
 })
 
 </script>
@@ -53,7 +53,7 @@ const statusIcon = computed(() => {
       <div class="status" v-if="status">
         <img :src="statusIcon" alt="status">
       </div>
-      <div class="percentage" v-if="status === undefined && !innerText">
+      <div class="percentage" v-if="(status === '' || status === undefined) && !innerText">
         {{ percentage }}%
       </div>
       <slot name="content"></slot>
