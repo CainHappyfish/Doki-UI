@@ -4,6 +4,7 @@ import {ref, useAttrs} from "vue";
 defineProps<{
   prefixIcon?: string,
   suffixIcon?: string,
+  inputId: string | number
 }>()
 
 const type = ref(useAttrs().type ? useAttrs().type as string : "");
@@ -29,12 +30,16 @@ const onVisible = (event: Event) => {
 
 <template>
   <div class="doki-textarea" v-if="isTextarea">
-    <textarea :placeholder="placeholder" :class="disabled ? 'disabled' : ''" :disabled="disabled"></textarea>
+    <textarea
+        :placeholder="placeholder"
+        :class="disabled ? 'disabled' : ''" :disabled="disabled"
+        :id="inputId"
+    ></textarea>
   </div>
 
   <div class="doki-input" v-else>
     <img :src="prefixIcon" alt="prefix" v-if="prefixIcon">
-    <input :type="type" :placeholder="placeholder" :class="disabled ? 'disabled' : ''" :disabled="disabled">
+    <input :type="type" :placeholder="placeholder" :class="disabled ? 'disabled' : ''" :disabled="disabled" :id="inputId">
     <div class="visible-icon"
          v-if="type === 'password'"
          @click="onVisible"

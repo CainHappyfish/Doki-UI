@@ -8,22 +8,22 @@ import DokiInput from "../components/input/dokiInput.vue";
     <h2 class="title-2">Form input</h2>
     <h3 class="title-3">Basic Input</h3>
     <div class="input">
-      <doki-input placeholder=""/>
+      <doki-input placeholder="" :input-id="1"/>
     </div>
 
     <h3 class="title-3">Disabled</h3>
     <div class="input">
-      <doki-input placeholder="disabled" disabled/>
+      <doki-input placeholder="disabled" disabled :input-id="1"/>
     </div>
 
     <h3 class="title-3">Password Input</h3>
     <div class="input">
-      <doki-input type="password" placeholder="Please enter your password" />
+      <doki-input type="password" placeholder="Please enter your password":input-id="1" />
     </div>
 
     <h3 class="title-3">Textarea</h3>
     <div class="input">
-      <doki-input textarea />
+      <doki-input textarea :input-id="1" />
     </div>
   </div>
 </template>
