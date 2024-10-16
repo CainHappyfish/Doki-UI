@@ -1,59 +1,33 @@
 # Doki-UI
  一个简易的个人组件库。
 
-计划中组件：
+安装：
 
-基础组件
+```bash
+# 本体
+npm install -D doki-ui
+# 依赖
+npm install -D @vitejs/plugin-vue axios sass typescript vite vite-plugin-dts vue-tsc
+```
 
-- ~~按钮~~
-- ~~链接~~
-- ~~输入框~~
-- ~~级联选择器~~
-- ~~单选框~~
-- ~~复选框~~
-- ~~单选按钮~~
-- ~~复选按钮~~
-- ~~手风琴选择器~~
-- ~~开关~~
-- ~~滑块~~
+在Vue项目文件中：
 
-
-数据
-
-- ~~头像~~
-- ~~轮播图~~
-- ~~手风琴~~
-- ~~图片~~
-- ~~标签~~
-- ~~无限滚动（懒加载+虚拟列表）~~
-- ~~分页~~
-- ~~进度条~~
-- ~~上传~~
-- ~~输入框~~
-- ~~表格~~
+- `main.ts`
+    ```typescript
+  import { createApp } from 'vue'
+  // import './style.css'
+  import App from './App.vue'
+  import DokiUI from "doki-ui/dist/doki-ui.js"
+  import "doki-ui/dist/style.css"
+  import "doki-ui/src/styles/index.scss"
+  
+  createApp(App).use(DokiUI).mount('#app')
+  ```
 
 
+version 2 计划中:
 
-布局 & 导航
-
-- ~~卡片~~
-- ~~多栏布局~~
-- ~~页头~~
-- ~~导航~~
-- ~~下拉菜单~~
-- ~~回到顶部~~
-- ~~步骤条~~
-- ~~分割线~~
-
-反馈
-
-- ~~提示~~
-- ~~对话框~~
-- ~~消息提示~~
-- ~~消息弹出框~~
-- ~~通知~~
-
-这些应该留到v2做
+组件
 
 - 复选按钮
 - 图片预览
@@ -71,3 +45,5 @@
 - 颜色选择器
 - 表格功能
 
+优化
+- 包使用
