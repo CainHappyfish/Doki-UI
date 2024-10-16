@@ -29,6 +29,7 @@ import MessageBoxPreivew from "./preview/messageBoxPreivew.vue";
 import NotificationPreview from "./preview/notificationPreview.vue";
 import FormInputPreview from "./preview/formInputPreview.vue";
 import FormPreview from "./preview/formPreview.vue";
+import TablePreview from "./preview/tablePreview.vue";
 
 </script>
 
@@ -63,6 +64,7 @@ import FormPreview from "./preview/formPreview.vue";
   <progress-preview />
   <upload-preview />
   <form-input-preview />
+  <table-preview />
 
 
   <doki-backtop />

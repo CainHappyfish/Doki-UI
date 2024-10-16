@@ -1,0 +1,54 @@
+.doki-table-container {
+  width: 600px;
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+
+  .doki-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; // 保证列宽固定
+
+    thead {
+      border-bottom: 1px solid rgb(0, 170, 187);
+      font-size: 20px;
+      color: #989696;
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid cyan;
+        transition: all 0.3s linear;
+
+        &:hover {
+          background: rgba(0, 170, 187, 0.2);
+        }
+
+        td {
+          line-height: 20px;
+          padding: 10px;
+          box-sizing: border-box;
+
+          .cell {
+
+          }
+        }
+      }
+    }
+
+    .stripe {
+      tr:nth-of-type(odd) {
+        background-color: rgba(211, 211, 211, 0.3);
+        &:hover {
+          background: rgba(0, 170, 187, 0.2);
+        }
+      }
+    }
+  }
+
+  .table-body-wrapper {
+    max-height: 400px;
+    overflow: auto;
+
+
+
+  }
+}
