@@ -4,7 +4,7 @@
 <div align="center">
 
 [Github](https://github.com/CainHappyfish/Doki-UI) | 
-[Blog](https://cainhappyfish.github.io/dokiDocs/)
+[Docs](https://cainhappyfish.github.io/dokiDocs/)
     
 </div>
 
