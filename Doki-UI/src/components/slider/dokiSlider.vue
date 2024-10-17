@@ -7,6 +7,10 @@ const slideDistance = ref(0)
 const curSlider = ref<HTMLElement | null>()
 const curSliderButton = ref<HTMLElement | null>()
 
+const emits = defineEmits<{
+  change: [percentage: number]
+}>()
+
 const handleSlideDown = (event: MouseEvent): void => {
   const target = event.target as HTMLElement | undefined
   // console.log('slideDown', target.parentElement)
@@ -42,6 +46,8 @@ const handleSlideUp = (): void => {
   // console.log('slideUp', event)
   document.removeEventListener("mousemove", handleSlideMove)
   document.removeEventListener('mouseup', handleSlideUp)
+
+  emits("change", percent.value)
 }
 </script>
 
