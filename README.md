@@ -1,5 +1,13 @@
 # Doki-UI
  一个简易的个人组件库。
+ 
+<div align="center">
+
+[Github](https://github.com/CainHappyfish/Doki-UI) | 
+[Blog](https://cainhappyfish.github.io/dokiDocs/)
+    
+</div>
+
 
 安装：
 
