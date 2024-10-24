@@ -93,9 +93,49 @@ export function install(app: App): void {
 
 }
 
+
 export default install
 export {
     dokiMessage,
     dokiMessagebox,
-    dokiNotification
+    dokiNotification,
+    dokiButton,
+    dokiLink,
+    dokiAutoFillInput,
+    dokiCascader,
+    dokiCheckbox,
+    dokiRadio,
+    dokiCheckboxButton,
+    dokiSwitch,
+    dokiSlider,
+    dokiAccordionSelector,
+    dokiAvatar,
+    dokiImage,
+    dokiCarousel,
+    dokiCarouselItem,
+    dokiAccordion,
+    dokiAccordionItem,
+    dokiTag,
+    dokiVirtualList,
+    dokiVirtualListItem,
+    dokiPagination,
+    dokiUpload,
+    dokiCard,
+    dokiRow,
+    dokiCol,
+    dokiBreadCrumb,
+    dokiPageHeader,
+    dokiBacktop,
+    dokiDivider,
+    dokiNavbar,
+    dokiDropdown,
+    dokiDropdownItem,
+    dokiSteps,
+    dokiStep,
+    dokiProgress,
+    dokiAlert,
+    dokiDialog,
+    dokiInput,
+    dokiTable,
 }
+

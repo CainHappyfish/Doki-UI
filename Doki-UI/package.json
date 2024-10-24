@@ -1,7 +1,7 @@
 {
   "name": "doki-ui",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,8 +11,8 @@
   "dependencies": {
     "vue": "^3.4.21"
   },
-  "main": "dist/demo-ui.js",
-  "module": "dist/demo-ui.cjs",
+  "main": "doki-UI/es/index.mjs",
+  "module": "doki-UI/lib/index.js",
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "axios": "^1.7.7",

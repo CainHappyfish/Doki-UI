@@ -28,7 +28,7 @@ npm install -D @vitejs/plugin-vue axios @vueuse/core sass typescript vite vite-p
   import App from './App.vue'
   import DokiUI from "doki-ui/dist/doki-ui.js"
   import "doki-ui/dist/style.css"
-  import "doki-ui/src/styles/index.scss"
+  import "doki-ui/packages/styles/index.scss"
   
   createApp(App).use(DokiUI).mount('#app')
   ```

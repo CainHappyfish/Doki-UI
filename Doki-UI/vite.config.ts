@@ -7,22 +7,35 @@ export default defineConfig({
   build: {
     lib: {
       name: 'doki-UI',
-      entry: 'src/index.ts',
-      formats: ['es', 'cjs'],
+      entry: 'packages/index.ts',
     },
     rollupOptions: {
       external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue',
+      input: ['packages/index.ts'],
+      output: [
+        {
+          format: "es",
+          entryFileNames: "[name].mjs",
+          preserveModules: false,
+          exports: "named",
+          dir: "doki-UI/es"
         },
-      },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].js',
+          preserveModules: false,
+          exports: 'named',
+          dir: 'doki-UI/lib'
+        }
+      ]
     },
   },
   plugins: [
     vue(),
     dts({
-      outDir: 'dist/types',
+      entryRoot: 'packages',
+      outDir: ['doki-UI/es', 'doki-UI/lib'],
+      tsConfigFilePath: "tsconfig.json",
     }),
   ],
   server: {
