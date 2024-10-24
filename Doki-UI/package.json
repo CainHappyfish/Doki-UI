@@ -1,7 +1,7 @@
 {
   "name": "doki-ui",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,14 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "axios": "^1.7.7",
+    "sass": "^1.79.3"
   },
   "main": "doki-UI/es/index.mjs",
   "module": "doki-UI/lib/index.js",
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "axios": "^1.7.7",
-    "sass": "^1.79.3",
     "typescript": "^5.2.2",
     "vite-plugin-dts": "^4.2.4",
     "vue-tsc": "^2.0.6",

@@ -64,7 +64,9 @@ const handleClean = () => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use "style/autoInput";
+
 .auto-input-container {
   position: relative;
 }

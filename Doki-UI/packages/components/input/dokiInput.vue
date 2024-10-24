@@ -49,6 +49,6 @@ const onVisible = (event: Event) => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/input";
 </style>

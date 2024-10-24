@@ -26,7 +26,7 @@ let curIndex = ref(0)
 const onIndicatorClick = (event: Event) => {
   const target = event.target as HTMLElement
   const container = target.parentElement!
-  const innerContent = container.parentElement!.querySelector(".doki-carousel-inner") as HTMLElement
+  const innerContent = container.parentElement!.querySelector(".doki-style-inner") as HTMLElement
   // console.log(container, container.parentElement!)
   const indicators = container.querySelectorAll(".indicator-item")
   curIndex.value = [...indicators.values()].indexOf(target)
@@ -44,7 +44,7 @@ const onIndicatorClick = (event: Event) => {
 const onLeftSwitchButtonClick = (event: Event) => {
   const target = event.target as HTMLElement
   const container = target.parentElement!
-  const innerContent = container.parentElement!.querySelector(".doki-carousel-inner") as HTMLElement
+  const innerContent = container.parentElement!.querySelector(".doki-style-inner") as HTMLElement
   const indicators = container.parentElement!.querySelectorAll(".indicator-item")
   curIndex.value = curIndex.value - 1 >= 0 ? --curIndex.value : 5
   const transVal = 800 * curIndex.value
@@ -63,7 +63,7 @@ const onLeftSwitchButtonClick = (event: Event) => {
 const onRightSwitchButtonClick = (event: Event) => {
   const target = event.target as HTMLElement
   const container = target.parentElement!
-  const innerContent = container.parentElement!.querySelector(".doki-carousel-inner") as HTMLElement
+  const innerContent = container.parentElement!.querySelector(".doki-style-inner") as HTMLElement
   const indicators = container.parentElement!.querySelectorAll(".indicator-item")
 
   curIndex.value = curIndex.value + 1 <= 5 ? ++curIndex.value : 0
@@ -102,5 +102,6 @@ const onRightSwitchButtonClick = (event: Event) => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use "style/carouselIndex";
 </style>

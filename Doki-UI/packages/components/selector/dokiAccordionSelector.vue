@@ -50,6 +50,6 @@ const clearAllCheckboxes = () => {
 
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/accordion";
 </style>

@@ -1,0 +1,151 @@
+
+/* background */
+$--doki-tag-default-bg: white;
+$--doki-tag-primary-bg: rgb(0, 170, 187);
+$--doki-tag-success-bg: rgb(119, 153, 119);
+$--doki-tag-warning-bg: rgb(255, 153, 34);
+$--doki-tag-danger-bg: rgb(221, 34, 0);
+
+/* border */
+$--doki-tag-default-border: #BBBBBB;
+$--doki-tag-default-border-hover: #0077DD;
+
+/* hover */
+$--doki-tag-default-bg-hover: #44DDFF;
+
+/* text */
+$--doki-tag-default-text-hover: #0077DD;
+
+
+/* hover */
+
+/* background */
+
+$--doki-hover-tag-default-bg: rgba(187, 187, 187, 0.3);
+$--doki-hover-tag-primary-bg: rgba(0, 170, 187, 0.3);
+$--doki-hover-tag-success-bg: rgba(119, 153, 119, 0.3);
+$--doki-hover-tag-warning-bg: rgba(255, 153, 34, 0.3);
+$--doki-hover-tag-danger-bg: rgba(221, 34, 0, 0.3);
+
+/* border */
+$--doki-tag-default-border: #BBBBBB;
+$--doki-tag-default-border-hover: #0077DD;
+
+/* hover */
+$--doki-tag-default-bg-hover: #44DDFF;
+
+/* text */
+$--doki-tag-default-text-hover: #0077DD;
+
+$--doki-tag-default-bg: white;
+$--doki-tag-primary-bg: rgb(0, 170, 187);
+$--doki-tag-success-bg: rgb(119, 153, 119);
+$--doki-tag-info-bg: rgb(187, 187, 187);
+$--doki-tag-warning-bg: rgb(255, 153, 34);
+$--doki-tag-danger-bg: rgb(221, 34, 0);
+
+
+.doki-tag {
+  min-width: 50px;
+  height: 20px;
+  cursor: pointer;
+
+  border: 1px solid var($--doki-tag-default-border);
+  background:var($--doki-tag-default-bg);
+
+  border-radius: 5px;
+  padding: 2px 5px;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease-in-out;
+
+}
+
+.close-icon {
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+
+  path {
+    fill: #BBBBBB;
+  }
+}
+
+.doki-tag:hover {
+  background: var($--doki-hover-tag-default-bg);
+  .close-icon path {
+    fill: white;
+  }
+}
+
+.doki-tag__primary {
+  border: 1px solid var($--doki-tag-primary-bg);
+  background: var($--doki-hover-tag-primary-bg);
+
+  .close-icon path {
+    fill: var($--doki-tag-primary-bg);
+  }
+}
+
+.doki-tag__primary:hover {
+  background: var($--doki-tag-primary-bg);
+  color: white;
+  .close-icon path {
+    fill: white;
+  }
+}
+
+.doki-tag__success {
+  border: 1px solid var($--doki-tag-success-bg);
+  background: var($--doki-hover-tag-success-bg);
+
+  .close-icon path {
+    fill: var($--doki-tag-success-bg);
+  }
+}
+
+.doki-tag__success:hover {
+  color: white;
+  background: var($--doki-tag-success-bg);
+  .close-icon path {
+    fill: white;
+  }
+}
+
+.doki-tag__warning {
+  border: 1px solid var($--doki-tag-warning-bg);
+  background: var($--doki-hover-tag-warning-bg);
+  .close-icon path {
+    fill: var($--doki-tag-warning-bg);
+  }
+}
+
+.doki-tag__warning:hover {
+  color: white;
+  background: var($--doki-tag-warning-bg);
+  .close-icon path {
+    fill: white;
+  }
+}
+
+.doki-tag__danger {
+  border: 1px solid var($--doki-tag-danger-bg);
+  background: var($--doki-hover-tag-danger-bg);
+  .close-icon path {
+    fill: var($--doki-tag-danger-bg);
+  }
+}
+
+.doki-tag__danger:hover {
+  color: white;
+  background: var($--doki-tag-danger-bg);
+  .close-icon path {
+    fill: white;
+  }
+}

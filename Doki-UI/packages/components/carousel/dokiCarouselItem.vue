@@ -10,6 +10,6 @@ const height = ref(useAttrs().height as number|| "")
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/carouselIndex";
 </style>

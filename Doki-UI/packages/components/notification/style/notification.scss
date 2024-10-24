@@ -1,0 +1,116 @@
+
+$--doki-message-default-bg: #e0faff;
+$--doki-message-info-bg: rgb(237, 237, 237);
+$--doki-message-success-bg: rgb(219, 255, 219);
+$--doki-message-warning-bg: rgb(255, 226, 195);
+$--doki-message-danger-bg: rgb(255, 209, 198);
+
+$--doki-message-text-default: #1cabca;
+$--doki-message-text-success: rgb(119, 153, 119);
+$--doki-message-text-info: rgb(147, 147, 147);
+$--doki-message-text-warning: rgb(255, 153, 34);
+$--doki-message-text-danger: rgb(221, 34, 0);
+
+
+.doki-notification {
+  width: 400px;
+  height: 150px;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition: all 0.3s ease-in-out;
+  animation: linear 0.2s show;
+
+  position: fixed;
+  top: 0;
+  right: 10px;
+
+  background: white;
+  filter: drop-shadow(0 0 2px var($--doki-message-text-default));
+
+  .doki-notification__title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 10px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+
+  }
+
+  .doki-notification__content {
+    display: flex;
+    flex: 1;
+  }
+
+  svg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+
+    path {
+      fill: var($--doki-message-text-default);
+    }
+  }
+
+}
+
+.center {
+  justify-content: center;
+}
+
+.doki-notification__success {
+  filter: drop-shadow(0 0 2px var($--doki-message-text-success));
+
+  svg {
+    path {
+      fill: var($--doki-message-text-success);
+    }
+  }
+}
+
+.doki-notification__info {
+  filter: drop-shadow(0 0 2px var($--doki-message-text-info));
+  svg {
+    path {
+      fill: var($--doki-message-text-info);
+    }
+  }
+}
+
+.doki-notification__warning {
+  filter: drop-shadow(0 0 2px var($--doki-message-text-warning));
+  svg {
+    path {
+      fill: var($--doki-message-text-warning);
+    }
+  }
+}
+
+.doki-notification__danger {
+  filter: drop-shadow(0 0 2px var($--doki-message-text-danger));
+  svg {
+    path {
+      fill: var($--doki-message-text-danger);
+    }
+  }
+}

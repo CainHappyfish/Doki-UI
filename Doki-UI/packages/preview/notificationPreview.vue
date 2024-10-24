@@ -3,7 +3,7 @@ import dokiNotification from "../components/notification/methods.ts"
 
 const clickDefault = () => {
   dokiNotification({
-    message: "This is a doki notification",
+    message: "This is a doki style",
   })
 }
 
@@ -11,7 +11,7 @@ const clickInfo = () => {
   dokiNotification({
     type: "info",
     title: "Info",
-    message: "This is a info notification",
+    message: "This is a info style",
   })
 }
 
@@ -19,7 +19,7 @@ const clickSuccess = () => {
   dokiNotification({
     type: "success",
     title: "Success",
-    message: "This is a success notification",
+    message: "This is a success style",
   })
 }
 
@@ -27,7 +27,7 @@ const clickWarning = () => {
   dokiNotification({
     type: "warning",
     title: "Warning",
-    message: "This is a warning notification",
+    message: "This is a warning style",
   })
 }
 
@@ -35,7 +35,7 @@ const clickDanger = () => {
   dokiNotification({
     type: "danger",
     title: "Danger",
-    message: "This is a danger notification",
+    message: "This is a danger style",
   })
 }
 

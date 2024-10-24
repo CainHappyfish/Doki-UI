@@ -19,7 +19,7 @@ const totalPage = computed(() => Math.ceil(total.value / perPage.value))
 const visiblePageLength = ref<number>(+(useAttrs().visible as string)? +(useAttrs().visible as string) : 6)
 // const fastIndex = ref(useAttrs().fast === "")
 const jumpable = ref(useAttrs().jumpable === "")
-// const short = ref(useAttrs().short === "" ? "short-pagination" : "")
+// const short = ref(useAttrs().short === "" ? "short-style" : "")
 const startPageIndex = ref<number>(1)
 const curIndex = ref(1)
 
@@ -42,7 +42,7 @@ const onPrev = (event: Event) => {
   console.log(startPageIndex.value)
   const target = event.target as HTMLElement
   const container = target.parentElement?.parentElement as HTMLElement
-  const curPages = [...container.querySelectorAll(".pagination-item").values()]
+  const curPages = [...container.querySelectorAll(".style-item").values()]
   const start = container.querySelector(".page-start") as HTMLElement
   const end = container.querySelector(".page-end") as HTMLElement
   end.classList.remove("chosen")
@@ -90,7 +90,7 @@ const onPrev = (event: Event) => {
 const onNext = (event: Event) => {
   const target = event.target as HTMLElement
   const container = target.parentElement?.parentElement as HTMLElement
-  const curPages = [...container.querySelectorAll(".pagination-item").values()]
+  const curPages = [...container.querySelectorAll(".style-item").values()]
   const start = container.querySelector(".page-start") as HTMLElement
   const end = container.querySelector(".page-end") as HTMLElement
   start.classList.remove("chosen")
@@ -156,7 +156,7 @@ const onClick = (event: Event) => {
   const target = event.target as HTMLElement
   // console.log(target.textContent)
   const container = target.parentElement as HTMLElement
-  const curPages = [...container.querySelectorAll(".pagination-item").values()]
+  const curPages = [...container.querySelectorAll(".style-item").values()]
   const start = container.querySelector(".page-start") as HTMLElement
   const end = container.querySelector(".page-end") as HTMLElement
   // console.log(curPages)
@@ -227,7 +227,7 @@ const onClick = (event: Event) => {
 const onJump = (e: Event) => {
   const target = e.target as HTMLInputElement
   const container = target.parentElement!.parentElement as HTMLElement
-  const curPages = container.querySelectorAll(".pagination-item")
+  const curPages = container.querySelectorAll(".style-item")
   const start = container.querySelector(".page-start") as HTMLElement
   const end = container.querySelector(".page-end") as HTMLElement
   const inputVal = +target.value;
@@ -329,6 +329,6 @@ const onJump = (e: Event) => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/pagination";
 </style>

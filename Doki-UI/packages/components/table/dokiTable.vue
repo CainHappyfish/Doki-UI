@@ -60,6 +60,6 @@ const stripe = ref(useAttrs().stripe === "" ? "stripe" : "")
 </template>
 
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/table";
 </style>

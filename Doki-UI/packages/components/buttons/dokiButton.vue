@@ -17,6 +17,6 @@ const buttonStyle = "doki-" + shape + type + "button" + " " + isDisabled
   </button>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/buttonsIndex";
 </style>

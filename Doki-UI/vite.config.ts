@@ -9,6 +9,7 @@ export default defineConfig({
       name: 'doki-UI',
       entry: 'packages/index.ts',
     },
+    copyPublicDir: false,
     rollupOptions: {
       external: ['vue'],
       input: ['packages/index.ts'],
@@ -18,15 +19,15 @@ export default defineConfig({
           entryFileNames: "[name].mjs",
           preserveModules: false,
           exports: "named",
-          dir: "doki-UI/es"
+          dir: "doki-UI/"
         },
-        {
-          format: 'cjs',
-          entryFileNames: '[name].js',
-          preserveModules: false,
-          exports: 'named',
-          dir: 'doki-UI/lib'
-        }
+        // {
+        //   format: 'cjs',
+        //   entryFileNames: '[name].js',
+        //   preserveModules: false,
+        //   exports: 'named',
+        //   dir: 'doki-UI/lib'
+        // }
       ]
     },
   },
@@ -34,7 +35,7 @@ export default defineConfig({
     vue(),
     dts({
       entryRoot: 'packages',
-      outDir: ['doki-UI/es', 'doki-UI/lib'],
+      outDir: ['doki-UI/'],
       tsConfigFilePath: "tsconfig.json",
     }),
   ],

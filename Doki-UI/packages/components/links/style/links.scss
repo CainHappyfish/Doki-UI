@@ -1,0 +1,66 @@
+$--doki-link-default-color: black;
+$--doki-link-primary-color: rgb(0, 170, 187);
+$--doki-link-success-color: rgb(119, 153, 119);
+$--doki-link-info-color: rgb(187, 187, 187);
+$--doki-link-warning-color: rgb(255, 153, 34);
+$--doki-link-danger-color: rgb(221, 34, 0);
+
+
+.doki-link {
+  width: 100px;
+  max-width: 200px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  font-weight: bold;
+  color: black;
+
+  transition: all 0.3s ease-in-out;
+
+
+  cursor: pointer;
+}
+
+.doki-link:hover {
+  opacity: 0.7;
+  background: rgba(187, 187, 187, 0.3);
+  border-radius: 5px;
+}
+
+.doki-primary-link {
+  color: var($--doki-link-primary-color);
+}
+
+.doki-primary-link-icon {
+  fill: var($--doki-link-primary-color);
+}
+
+.doki-success-link {
+  color: var($--doki-link-success-color);
+  fill: var($--doki-link-success-color);
+}
+
+.doki-info-link {
+  color: var($--doki-link-info-color);
+  fill: var($--doki-link-info-color);
+}
+
+.doki-warning-link {
+  color: var($--doki-link-warning-color);
+  fill: var($--doki-link-warning-color);
+}
+
+.doki-danger-link {
+  color: var($--doki-link-danger-color);
+  fill: var($--doki-link-danger-color);
+}
+
+.doki-disabled-link {
+  opacity: 0.6;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}

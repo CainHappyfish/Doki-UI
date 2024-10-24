@@ -13,7 +13,9 @@ const iconStyle = useAttrs().type ? "doki-" + useAttrs().type + "-link-icon" : "
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use "style/links";
+
 .link-icon {
   margin: 5px 0;
 

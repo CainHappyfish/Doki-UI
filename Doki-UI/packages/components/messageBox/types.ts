@@ -1,5 +1,5 @@
 import {ExtractPropTypes, PropType, Component, VNode} from "vue";
-// import {definePropType} from "../message/types.ts";
+// import {definePropType} from "../style/types.ts";
 
 export type Action = 'confirm' | 'close' | 'cancel'
 export type MessageBoxType = '' | 'prompt' | 'alert' | 'confirm'
@@ -26,7 +26,7 @@ export const messageBoxProps = {
         type: [String, Object, Function] as PropType<
             string | VNode | (() => VNode)
         >,
-        default: 'This is a message.'
+        default: 'This is a style.'
     },
     icon: {
         type: [String, Object, Function] as PropType<string | Component>,

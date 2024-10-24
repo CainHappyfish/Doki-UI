@@ -1,0 +1,106 @@
+
+$--doki-alert-default-bg: #e0faff;
+$--doki-alert-info-bg: rgb(237, 237, 237);
+$--doki-alert-success-bg: rgb(219, 255, 219);
+$--doki-alert-warning-bg: rgb(255, 226, 195);
+$--doki-alert-danger-bg: rgb(255, 209, 198);
+
+$--doki-alert-text-default: #1cabca;
+$--doki-alert-text-success: rgb(119, 153, 119);
+$--doki-alert-text-info: rgb(147, 147, 147);
+$--doki-alert-text-warning: rgb(255, 153, 34);
+$--doki-alert-text-danger: rgb(221, 34, 0);
+
+
+.doki-alert {
+  width: 300px;
+  min-height: 40px;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  border-radius: 5px;
+  background: var($--doki-alert-default-bg);
+  color: var($--doki-alert-text-default);
+
+  position: relative;
+  z-index: 123;
+
+  display: flex;
+  align-items: center;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  font-weight: bold;
+
+  .doki-alert__icon {
+    width: 20px;
+    height: 20px;
+
+    margin: 0 10px 0 0 ;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .doki-alert__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .description {
+      font-weight: normal;
+      font-size: 13px;
+    }
+  }
+
+  svg {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 5px;
+    path {
+      fill: var($--doki-alert-text-default);
+    }
+  }
+}
+
+.doki-alert__info {
+  background: var($--doki-alert-info-bg);
+  color: var($--doki-alert-text-info);
+  svg {
+    path {
+      fill: var($--doki-alert-text-info);
+    }
+  }
+}
+
+.doki-alert__success {
+  background: var($--doki-alert-success-bg);
+  color: var($--doki-alert-text-success);
+  svg {
+    path {
+      fill: var($--doki-alert-text-success);
+    }
+  }
+}
+
+.doki-alert__warning {
+  background: var($--doki-alert-warning-bg);
+  color: var($--doki-alert-text-warning);
+  svg {
+    path {
+      fill: var($--doki-alert-text-warning);
+    }
+  }
+}
+
+.doki-alert__danger {
+  background: var($--doki-alert-danger-bg);
+  color: var($--doki-alert-text-danger);
+  svg {
+    path {
+      fill: var($--doki-alert-text-danger);
+    }
+  }
+}

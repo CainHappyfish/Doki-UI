@@ -8,7 +8,7 @@ const onClick = (event: Event) => {
   const container = target.parentElement?.parentElement as HTMLElement
   const menu = container.querySelector(".doki-dropdown__menu")
 
-  // console.log(container, menu)
+  // console.log(container, style)
   if (menu) {
     menu.classList.toggle("hide")
   }
@@ -30,6 +30,6 @@ const onClick = (event: Event) => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/dropdown";
 </style>

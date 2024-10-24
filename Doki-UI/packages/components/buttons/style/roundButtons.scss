@@ -1,0 +1,132 @@
+@import "vars";
+
+.doki-round-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  font-weight: bold;
+  background: var(--button-default-bg);
+  color: black;
+  border: 1px solid $--doki-button-default-border;
+  border-radius: 50%;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.doki-round-button:hover {
+  background: $--doki-button-default-bg-hover;
+  border: 1px solid $--doki-button-default-border-hover;
+  color: $--doki-button-default-text-hover;
+  opacity: 0.8;
+
+}
+
+.doki-round-primary-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+  background: $--doki-button-primary-bg;
+  color: white;
+}
+
+.doki-round-primary-button:hover {
+  background: $--doki-button-primary-bg;
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-round-info-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+  background: $--doki-button-info-bg;
+  color: white;
+}
+
+.doki-round-info-button:hover {
+  background: $--doki-button-info-bg;
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-round-success-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+  background: $--doki-button-success-bg;
+  color: white;
+}
+
+.doki-round-success-button:hover {
+  background: $--doki-button-success-bg;
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-round-warning-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+  background: $--doki-button-warning-bg;
+  color: white;
+}
+
+.doki-round-warning-button:hover {
+  background: $--doki-button-warning-bg;
+  opacity: 0.6;
+  border: none;
+  color: white;
+}
+
+.doki-round-danger-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+  background: $--doki-button-danger-bg;
+  color: white;
+}
+
+.doki-round-danger-button:hover {
+  background: $--doki-button-danger-bg;
+  opacity: 0.6;
+  border: none;
+  color: white;
+}

@@ -30,6 +30,6 @@ nextTick(() => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/breadcrumbIndex";
 </style>

@@ -131,6 +131,6 @@ defineExpose({
   </transition>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/message";
 </style>

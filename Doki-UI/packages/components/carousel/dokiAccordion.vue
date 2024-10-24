@@ -30,6 +30,6 @@ watchEffect(() => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/carouselIndex";
 </style>

@@ -21,6 +21,6 @@ const disabled = computed(() => isDisabled.value ? "doki-radio-disabled" : "")
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/radio";
 </style>

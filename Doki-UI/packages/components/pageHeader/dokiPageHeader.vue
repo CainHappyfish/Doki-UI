@@ -48,6 +48,6 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/pageHeader";
 </style>

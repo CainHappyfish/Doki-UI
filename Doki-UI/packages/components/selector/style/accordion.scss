@@ -1,0 +1,73 @@
+
+/* background */
+$--doki-selector-checked-bg: rgb(0, 170, 187);
+$--doki-selector-success-checked-bg: rgb(119, 153, 119);
+$--doki-selector-disabled-checked-bg: rgb(187, 187, 187);
+$--doki-selector-warning-checked-bg: rgb(255, 153, 34);
+$--doki-selector-danger-checked-bg: rgb(221, 34, 0);
+
+/* accordion */
+$--doki-accordion-radio-color: rgba(255, 85, 34);
+$--doki-accordion-checkbox-color: rgb(0, 170, 187);
+
+
+.doki-accordion-selector {
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid var($--doki-accordion-checkbox-color);
+}
+
+
+.accordion-item {
+  width: 100%;
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  z-index: -1;
+
+}
+
+.accordion-item input {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion-label {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  color: white;
+  background: var($--doki-accordion-checkbox-color);
+  font-weight: bold;
+  padding: 3px;
+  box-sizing: border-box;
+  position: relative;
+
+}
+
+
+.accordion-content {
+  width: 100%;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-left: 6px;
+  position: relative;
+
+  font-size: 14px;
+  transition: all 0.35s;
+}
+
+.accordion-item input:checked {
+  background: var($--doki-accordion-radio-color);
+}
+
+.accordion-item input:checked ~ .accordion-content {
+  max-height: 10rem;
+
+}
+
+.close-accordion {
+  flex-direction: row-reverse;
+}

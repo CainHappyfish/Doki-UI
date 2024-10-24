@@ -3,13 +3,13 @@ import dokiMessage from "../components/message/methods.ts"
 import { h } from 'vue'
 const clickDefault = () => {
   dokiMessage({
-    message: "This is doki message",
+    message: "This is doki style",
   })
 }
 
 const clickClosable = () => {
   dokiMessage({
-    message: "This is doki message",
+    message: "This is doki style",
     showClose: true,
     duration: 100000,
   })
@@ -41,35 +41,35 @@ const clickDangerHTML = () => {
 
 const clickCenter = () => {
   dokiMessage({
-    message: "This is doki message",
+    message: "This is doki style",
     center: true,
   })
 }
 
 const clickInfo = () => {
   dokiMessage({
-    message: "This is info message",
+    message: "This is info style",
     type: "info",
   })
 }
 
 const clickSuccess = () => {
   dokiMessage({
-    message: "This is success message",
+    message: "This is success style",
     type: "success",
   })
 }
 
 const clickWarning = () => {
   dokiMessage({
-    message: "This is warning message",
+    message: "This is warning style",
     type: "warning",
   })
 }
 
 const clickDanger = () => {
   dokiMessage({
-    message: "This is danger message",
+    message: "This is danger style",
     type: "danger",
   })
 }

@@ -27,6 +27,6 @@ const slots = useSlots().default
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/dividerIndex";
 </style>

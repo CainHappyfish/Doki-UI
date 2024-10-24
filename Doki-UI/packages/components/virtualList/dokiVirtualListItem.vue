@@ -11,6 +11,6 @@ const isVisible = ref(true); // 是否显示内容
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/virtualList";
 </style>

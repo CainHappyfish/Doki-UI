@@ -35,7 +35,7 @@ function createMessage(options: Partial<MessageOptions>) {
         }
     }
 
-    // 创建 message 实例
+    // 创建 style 实例
     const vnode = createVNode(
         MessageConstructor,
         props,

@@ -12,8 +12,8 @@ const selected = ref<Map<number, string>>(new Map<number, string>())
 const isShow = ref(false)
 const handleMenu = (event: Event) => {
   const target = event.currentTarget as HTMLElement
-  const menuIcon = target.querySelector('.menu-icon')
-  const menuSelection = target.querySelector('.cascader-menu')
+  const menuIcon = target.querySelector('.style-icon')
+  const menuSelection = target.querySelector('.cascader-style')
 
   isShow.value = !isShow.value
 
@@ -21,21 +21,21 @@ const handleMenu = (event: Event) => {
 
 
   target.classList.toggle('doki-cascader-focus')
-  menuIcon?.classList.toggle('menu-icon-inactive')
-  menuIcon?.classList.toggle('menu-icon-active')
+  menuIcon?.classList.toggle('style-icon-inactive')
+  menuIcon?.classList.toggle('style-icon-active')
 
 }
 
 const handleCascaderBlur = (event: Event) => {
   const target = event.target as HTMLElement
-  // console.log("global click", target.classList.contains('doki-cascader') || target.classList.contains('cascader-input') || target.classList.contains('cascader-menu'))
+  // console.log("global click", target.classList.contains('doki-cascader') || target.classList.contains('cascader-input') || target.classList.contains('cascader-style'))
   if (target && !(target.classList.contains('doki-cascader') ||
       target.classList.contains('cascader-input') ||
-      target.classList.contains('cascader-menu')
+      target.classList.contains('cascader-style')
   )) {
-    const menuIcon = document.querySelector('.menu-icon')
-    menuIcon!.classList.remove("menu-icon-active")
-    menuIcon!.classList.add('menu-icon-inactive')
+    const menuIcon = document.querySelector('.style-icon')
+    menuIcon!.classList.remove("style-icon-active")
+    menuIcon!.classList.add('style-icon-inactive')
     // console.log(menuIcon!.classList)
     document.querySelectorAll('.selection-container').forEach(menu => {
       menu.classList.add('cascader-hide')
@@ -78,7 +78,9 @@ onUnmounted(() => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use "style/cascader";
+
 .menu-icon {
   width: 20px;
   z-index: -1;

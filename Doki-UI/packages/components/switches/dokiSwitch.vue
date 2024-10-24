@@ -17,5 +17,5 @@ const onClick = (event: Event) => {
 </template>
 
 <style scoped lang="scss">
-
+@use "style/switches";
 </style>

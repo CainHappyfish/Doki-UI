@@ -34,6 +34,6 @@ const description = ref(useAttrs().description ? useAttrs().description : "");
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/steps";
 </style>

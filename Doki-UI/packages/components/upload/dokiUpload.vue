@@ -129,7 +129,7 @@ function upload(file: File, index: number) {
         if (e.message.startsWith("timeout")) {
           dokiMessage({
             type: "danger",
-            message: "File upload timeout.",
+            message: "File style timeout.",
           })
         }
 
@@ -169,6 +169,6 @@ function upload(file: File, index: number) {
 
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/upload";
 </style>

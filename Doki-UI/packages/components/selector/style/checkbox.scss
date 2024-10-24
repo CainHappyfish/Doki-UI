@@ -1,0 +1,83 @@
+
+/* background */
+$--doki-selector-checked-bg: rgb(0, 170, 187);
+$--doki-selector-success-checked-bg: rgb(119, 153, 119);
+$--doki-selector-disabled-checked-bg: rgb(187, 187, 187);
+$--doki-selector-warning-checked-bg: rgb(255, 153, 34);
+$--doki-selector-danger-checked-bg: rgb(221, 34, 0);
+
+/* accordion */
+$--doki-accordion-radio-color: rgba(255, 85, 34);
+$--doki-accordion-checkbox-color: rgb(0, 170, 187);
+
+
+.doki-checkbox {
+  font-family: "Microsoft YaHei UI Light", sans-serif;
+  cursor: pointer;
+}
+
+.doki-checkbox input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 11px;
+  position: relative;
+  outline: none;
+  appearance: none;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.doki-checkbox input[type="checkbox"]::before {
+  cursor: pointer;
+  content: "\25CF";
+  color: var($--doki-selector-checked-bg);
+  font-size: 16px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  border: 1px solid var($--doki-selector-checked-bg);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.doki-checkbox input[type="checkbox"]:checked::before {
+  cursor: pointer;
+  content: "\25CF";
+  background-color: var($--doki-selector-checked-bg);
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.doki-checkbox label {
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.doki-checkbox-disabled {
+  color: var($--doki-selector-disabled-checked-bg);
+  cursor: not-allowed;
+}
+
+.doki-checkbox-disabled input[type="checkbox"]::before {
+  cursor: not-allowed;
+  color: var($--doki-selector-disabled-checked-bg);
+  border: 1px solid var($--doki-selector-disabled-checked-bg);
+}
+
+.doki-checkbox-disabled label {
+  cursor: not-allowed;
+  margin: 0 3px;
+}

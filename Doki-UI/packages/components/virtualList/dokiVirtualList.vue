@@ -180,3 +180,7 @@ function setCache(i: number, topVal: number, height: number) {
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+@use "style/virtualList";
+</style>

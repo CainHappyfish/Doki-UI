@@ -19,6 +19,6 @@ const type = ref(useAttrs().type ? "doki-navbar__" + useAttrs().type : "doki-nav
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/navBar";
 </style>

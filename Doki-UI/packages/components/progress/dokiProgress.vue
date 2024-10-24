@@ -61,6 +61,6 @@ const statusIcon = computed(() => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/progress";
 </style>

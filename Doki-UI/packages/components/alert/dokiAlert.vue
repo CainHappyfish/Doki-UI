@@ -49,6 +49,6 @@ const handleClick = () => {
   </div>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use "style/alertIndex";
 </style>
