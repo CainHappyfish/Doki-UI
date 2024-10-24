@@ -20,8 +20,8 @@ $--doki-alert-text-danger: rgb(221, 34, 0);
   box-sizing: border-box;
 
   border-radius: 5px;
-  background: var($--doki-alert-default-bg);
-  color: var($--doki-alert-text-default);
+  background: $--doki-alert-default-bg;
+  color: $--doki-alert-text-default;
 
   position: relative;
   z-index: 123;
@@ -60,47 +60,47 @@ $--doki-alert-text-danger: rgb(221, 34, 0);
     height: 15px;
     right: 5px;
     path {
-      fill: var($--doki-alert-text-default);
+      fill: $--doki-alert-text-default;
     }
   }
 }
 
 .doki-alert__info {
-  background: var($--doki-alert-info-bg);
-  color: var($--doki-alert-text-info);
+  background: $--doki-alert-info-bg;
+  color: $--doki-alert-text-info;
   svg {
     path {
-      fill: var($--doki-alert-text-info);
+      fill: $--doki-alert-text-info;
     }
   }
 }
 
 .doki-alert__success {
-  background: var($--doki-alert-success-bg);
-  color: var($--doki-alert-text-success);
+  background: $--doki-alert-success-bg;
+  color: $--doki-alert-text-success;
   svg {
     path {
-      fill: var($--doki-alert-text-success);
+      fill: $--doki-alert-text-success;
     }
   }
 }
 
 .doki-alert__warning {
-  background: var($--doki-alert-warning-bg);
-  color: var($--doki-alert-text-warning);
+  background: $--doki-alert-warning-bg;
+  color: $--doki-alert-text-warning;
   svg {
     path {
-      fill: var($--doki-alert-text-warning);
+      fill: $--doki-alert-text-warning;
     }
   }
 }
 
 .doki-alert__danger {
-  background: var($--doki-alert-danger-bg);
-  color: var($--doki-alert-text-danger);
+  background: $--doki-alert-danger-bg;
+  color: $--doki-alert-text-danger;
   svg {
     path {
-      fill: var($--doki-alert-text-danger);
+      fill: $--doki-alert-text-danger;
     }
   }
 }

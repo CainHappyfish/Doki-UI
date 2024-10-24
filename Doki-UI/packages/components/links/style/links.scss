@@ -32,31 +32,31 @@ $--doki-link-danger-color: rgb(221, 34, 0);
 }
 
 .doki-primary-link {
-  color: var($--doki-link-primary-color);
+  color: $--doki-link-primary-color;
 }
 
 .doki-primary-link-icon {
-  fill: var($--doki-link-primary-color);
+  fill: $--doki-link-primary-color;
 }
 
 .doki-success-link {
-  color: var($--doki-link-success-color);
-  fill: var($--doki-link-success-color);
+  color: $--doki-link-success-color;
+  fill: $--doki-link-success-color;
 }
 
 .doki-info-link {
-  color: var($--doki-link-info-color);
-  fill: var($--doki-link-info-color);
+  color: $--doki-link-info-color;
+  fill: $--doki-link-info-color;
 }
 
 .doki-warning-link {
-  color: var($--doki-link-warning-color);
-  fill: var($--doki-link-warning-color);
+  color: $--doki-link-warning-color;
+  fill: $--doki-link-warning-color;
 }
 
 .doki-danger-link {
-  color: var($--doki-link-danger-color);
-  fill: var($--doki-link-danger-color);
+  color: $--doki-link-danger-color;
+  fill: $--doki-link-danger-color;
 }
 
 .doki-disabled-link {

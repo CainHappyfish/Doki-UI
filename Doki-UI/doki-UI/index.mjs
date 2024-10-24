@@ -3167,6 +3167,7 @@ const Js = {
       (b(), m("svg", {
         onClick: o,
         x: "1728033233491",
+        style: { cursor: "pointer" },
         viewBox: "0 0 1024 1024",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg",
@@ -3183,7 +3184,7 @@ const Js = {
       ])))
     ], 2)) : R("", !0);
   }
-}), u2 = /* @__PURE__ */ S(f2, [["__scopeId", "data-v-fadceeef"]]), d2 = { class: "doki-dialog" }, c2 = { class: "doki-dialog__header" }, v2 = { class: "doki-dialog__content" }, p2 = /* @__PURE__ */ L({
+}), u2 = /* @__PURE__ */ S(f2, [["__scopeId", "data-v-b1ee8164"]]), d2 = { class: "doki-dialog" }, c2 = { class: "doki-dialog__header" }, v2 = { class: "doki-dialog__content" }, p2 = /* @__PURE__ */ L({
   __name: "dokiDialog",
   props: {
     modelValue: { type: Boolean },

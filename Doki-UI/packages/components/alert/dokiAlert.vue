@@ -41,6 +41,7 @@ const handleClick = () => {
       </div>
     </div>
     <svg @click="handleClick" x="1728033233491"
+         style="cursor: pointer"
          viewBox="0 0 1024 1024" version="1.1"
          xmlns="http://www.w3.org/2000/svg" p-id="4257" xmlns:xlink="http://www.w3.org/1999/xlink"
          width="50" height="50">

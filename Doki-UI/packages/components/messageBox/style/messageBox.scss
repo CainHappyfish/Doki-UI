@@ -99,7 +99,7 @@ $--doki-message-text-danger: rgb(221, 34, 0);
       padding: 0 5px;
 
       border-radius: 5px;
-      border: 1px solid var($--doki-message-text-default);
+      border: 1px solid $--doki-message-text-default;
     }
 
     input:focus-visible {

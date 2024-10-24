@@ -7,17 +7,15 @@
         "dev": "vite",
         "build": "vue-tsc && vite build",
         "preview": "vite preview",
-        "create": "node scripts/createComponent.cjs",
-        "build:Test": "vue-tsc && cross-env MODULE_NAME=Test TITLE=Testvite build",
-        "build:test": "vue-tsc && cross-env MODULE_NAME=test TITLE=test vite build"
+        "create": "node scripts/createComponent.cjs"
     },
     "dependencies": {
         "vue": "^3.4.21",
         "axios": "^1.7.7",
         "sass": "^1.79.3"
     },
-    "main": "doki-UI/es/index.mjs",
-    "module": "doki-UI/lib/index.js",
+    "main": "doki-UI/index.mjs",
+    "module": "doki-UI/index.mjs",
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.0.4",
         "typescript": "^5.2.2",

@@ -34,7 +34,7 @@ $--doki-message-text-danger: rgb(221, 34, 0);
   right: 10px;
 
   background: white;
-  filter: drop-shadow(0 0 2px var($--doki-message-text-default));
+  filter: drop-shadow(0 0 2px $--doki-message-text-default);
 
   .doki-notification__title {
     display: flex;
@@ -68,7 +68,7 @@ $--doki-message-text-danger: rgb(221, 34, 0);
     cursor: pointer;
 
     path {
-      fill: var($--doki-message-text-default);
+      fill: $--doki-message-text-default;
     }
   }
 
@@ -79,38 +79,38 @@ $--doki-message-text-danger: rgb(221, 34, 0);
 }
 
 .doki-notification__success {
-  filter: drop-shadow(0 0 2px var($--doki-message-text-success));
+  filter: drop-shadow(0 0 2px $--doki-message-text-success);
 
   svg {
     path {
-      fill: var($--doki-message-text-success);
+      fill: $--doki-message-text-success;
     }
   }
 }
 
 .doki-notification__info {
-  filter: drop-shadow(0 0 2px var($--doki-message-text-info));
+  filter: drop-shadow(0 0 2px $--doki-message-text-info);
   svg {
     path {
-      fill: var($--doki-message-text-info);
+      fill: $--doki-message-text-info;
     }
   }
 }
 
 .doki-notification__warning {
-  filter: drop-shadow(0 0 2px var($--doki-message-text-warning));
+  filter: drop-shadow(0 0 2px $--doki-message-text-warning);
   svg {
     path {
-      fill: var($--doki-message-text-warning);
+      fill: $--doki-message-text-warning;
     }
   }
 }
 
 .doki-notification__danger {
-  filter: drop-shadow(0 0 2px var($--doki-message-text-danger));
+  filter: drop-shadow(0 0 2px $--doki-message-text-danger);
   svg {
     path {
-      fill: var($--doki-message-text-danger);
+      fill: $--doki-message-text-danger;
     }
   }
 }

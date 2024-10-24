@@ -29,7 +29,7 @@ $--doki-progress-fail-bg: rgb(221, 34, 0);
 
       transition: all 0.3s linear;
       border-radius: 5px;
-      background: var($--doki-progress-default-bg);
+      background: $--doki-progress-default-bg;
 
       .percentage {
         position: absolute;
@@ -43,15 +43,15 @@ $--doki-progress-fail-bg: rgb(221, 34, 0);
     }
 
     .doki-progress__success {
-      background: var($--doki-progress-success-bg);
+      background: $--doki-progress-success-bg;
     }
 
     .doki-progress__warning {
-      background: var($--doki-progress-warning-bg);
+      background: $--doki-progress-warning-bg;
     }
 
     .doki-progress__fail {
-      background: var($--doki-progress-fail-bg);
+      background: $--doki-progress-fail-bg;
     }
   }
 

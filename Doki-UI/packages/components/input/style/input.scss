@@ -13,7 +13,7 @@ $--doki-input-focus-border: #0077DD;
     padding: 5px 10px;
     appearance: none;
     border-radius: 3px;
-    border: 1px solid var($--doki-input-border);
+    border: 1px solid $--doki-input-border;
     font-family: "Microsoft YaHei UI Light", sans-serif;
     transition: all 0.3s ease-in-out;
     width: 170px;
@@ -22,11 +22,11 @@ $--doki-input-focus-border: #0077DD;
   }
 
   input:hover {
-    border: 1px solid var($--doki-input-hover-border);
+    border: 1px solid $--doki-input-hover-border;
   }
 
   :focus-visible {
-    border: 1px solid var($--doki-input-focus-border);
+    border: 1px solid $--doki-input-focus-border;
     outline: none;
   }
 
@@ -63,7 +63,7 @@ $--doki-input-focus-border: #0077DD;
   margin: 0 10px;
 
   border-radius: 50%;
-  border-top: 1px solid var($--doki-input-border);
+  border-top: 1px solid $--doki-input-border;
   border-bottom: 1px solid rgba(85, 221, 238, 0.3);
 
   transition: all 0.3s ease;
@@ -72,7 +72,7 @@ $--doki-input-focus-border: #0077DD;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    border: 1px solid var($--doki-input-border);
+    border: 1px solid $--doki-input-border;
 
     z-index: -1;
 
@@ -82,7 +82,7 @@ $--doki-input-focus-border: #0077DD;
 
 .visible {
   height: 2px;
-  border-bottom: 1px solid var($--doki-input-border);
+  border-bottom: 1px solid $--doki-input-border;
 
   .inner {
     height: 0;
@@ -96,7 +96,7 @@ $--doki-input-focus-border: #0077DD;
     padding: 5px 10px;
     appearance: none;
     border-radius: 3px;
-    border: 1px solid var($--doki-input-border);
+    border: 1px solid $--doki-input-border;
     font-family: "Microsoft YaHei UI Light", sans-serif;
     transition: all 0.3s ease-in-out;
     width: 300px;
@@ -104,11 +104,11 @@ $--doki-input-focus-border: #0077DD;
   }
 
   textarea:hover {
-    border: 1px solid var($--doki-input-hover-border);
+    border: 1px solid $--doki-input-hover-border;
   }
 
   textarea:focus-visible {
-    border: 1px solid var($--doki-input-focus-border);
+    border: 1px solid $--doki-input-focus-border;
     outline: none;
   }
 }
