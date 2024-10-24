@@ -4,7 +4,9 @@
 npm install -D doki-ui
 ```
 
-# Ver 1.0.0
+# Ver 1.0.2
+
+对于前版本优化了包结构。
 
 基础组件
 
