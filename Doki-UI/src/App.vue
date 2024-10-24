@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // import { dokiMessage } from "../dist/doki-ui"
-// // import Preview from "./preview.vue";
+import Preview from "./preview.vue";
 // const onClick = () => {
 //   dokiMessage({
 //     type: "success",
@@ -10,7 +10,7 @@
 </script>
 
 <template>
-<!--  <preview />-->
+  <preview />
 <!--  <doki-button @click="onClick"> success </doki-button>-->
 </template>
 
