@@ -4,7 +4,8 @@
 <div align="center">
 
 [Github](https://github.com/CainHappyfish/Doki-UI) | 
-[Docs](https://cainhappyfish.github.io/dokiDocs/)
+[Docs](https://cainhappyfish.github.io/dokiDocs/) |
+[Preview](https://doki-ui-preview-rnxg-flxic9tkd-cainhappyfishs-projects.vercel.app/)
     
 </div>
 
