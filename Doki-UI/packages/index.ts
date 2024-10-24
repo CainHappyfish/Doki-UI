@@ -42,6 +42,8 @@ import type { App } from 'vue'
 import dokiInput from "./components/input/dokiInput.vue";
 import dokiTable from "./components/table/dokiTable.vue";
 
+import "./index.scss"
+
 export const components = [
     dokiButton,
     dokiLink,

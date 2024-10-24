@@ -1,0 +1,73 @@
+.hide {
+  animation: linear 0.1s hide;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 100%;
+  }
+  33% {
+    opacity: 66%;
+  }
+  66% {
+    opacity: 33%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 33%;
+  }
+  66% {
+    opacity: 66%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.doki-message__hide-enter-active, .doki-message__hide-leave-active,{
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.doki-message__hide-enter-from, .doki-message__hide-leave-to,{
+  opacity: 0;
+}
+
+* {
+
+  // 真正隐藏按钮的操作，自定义滑块
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+
+  // 当鼠标悬停时显示滚动条
+  &:hover::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  // 滚动条滑块的样式
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  // 貌似没用
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent; // 滚动条轨道背景透明
+  }
+}
