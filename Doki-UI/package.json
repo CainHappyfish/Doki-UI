@@ -1,27 +1,30 @@
 {
-  "name": "doki-ui",
-  "private": false,
-  "version": "1.0.4",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.4.21",
-    "axios": "^1.7.7",
-    "sass": "^1.79.3"
-  },
-  "main": "doki-UI/es/index.mjs",
-  "module": "doki-UI/lib/index.js",
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "typescript": "^5.2.2",
-    "vite-plugin-dts": "^4.2.4",
-    "vue-tsc": "^2.0.6",
-    "@vue/shared": "^3.5.12",
-    "@vueuse/core": "^11.1.0",
-    "vite": "^5.4.7"
-  }
+    "name": "doki-ui",
+    "private": false,
+    "version": "1.0.4",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "create": "node scripts/createComponent.cjs",
+        "build:Test": "vue-tsc && cross-env MODULE_NAME=Test TITLE=Testvite build",
+        "build:test": "vue-tsc && cross-env MODULE_NAME=test TITLE=test vite build"
+    },
+    "dependencies": {
+        "vue": "^3.4.21",
+        "axios": "^1.7.7",
+        "sass": "^1.79.3"
+    },
+    "main": "doki-UI/es/index.mjs",
+    "module": "doki-UI/lib/index.js",
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.4",
+        "typescript": "^5.2.2",
+        "vite-plugin-dts": "^4.2.4",
+        "vue-tsc": "^2.0.6",
+        "@vue/shared": "^3.5.12",
+        "@vueuse/core": "^11.1.0",
+        "vite": "^5.4.7"
+    }
 }
