@@ -16,7 +16,7 @@
 # 本体
 npm install -D doki-ui
 # 依赖
-npm install -D @vitejs/plugin-vue axios sass typescript vite vite-plugin-dts vue-tsc
+npm install -D @vitejs/plugin-vue axios @vueuse/core sass typescript vite vite-plugin-dts vue-tsc
 ```
 
 在Vue项目文件中：
